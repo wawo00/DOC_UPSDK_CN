@@ -112,6 +112,23 @@ public static void hideBannerAdAtBottom();
 public static void removeBannerAdAt(string cpPlaceId);
 
 /*
+* 根据坐标、旋转角度、广告位，展示UPSDK的Icon广告
+* @param x: 起始位横坐标
+* @param y: 起始位纵坐标
+* @param width: 宽度
+* @param height: 高度
+* @param rotationAngle: 顺时针旋转角度
+* @param cpPlaceId: 广告位标识符
+*/
+public static void showIconAd(double x, double y, double width, double height, double rotationAngle, string cpPlaceId);
+
+/*
+* 根据广告位，删除aUPSDK的Icon广告
+* @param cpPlaceId: 广告位标识符
+*/
+public static void removeIconAdAt(string cpPlaceId);
+
+/*
 * 设置Android平台 manifest.xml中所定义的packagename
 * 2031以后，此方法被废弃，UPSDK初始化后不需要再调用
 */
