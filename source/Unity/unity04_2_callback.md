@@ -130,3 +130,29 @@ public static Action<string> UPExitAdOnExitCallback = null;
 public static Action<string> UPExitAdOnCancelCallback = null;
 #endif
 ```
+
+#### 4.Icon广告回调接口
+
+Icon广告目前仅适用于iOS平台
+
+```
+/*
+* Icon加载成功时回调此代理
+*/
+public static Action<string, string> UPIconDidLoadCallback = null;
+
+/*
+* Icon加载失败时回调此代理
+*/
+public static Action<string, string> UPIconDidLoadFailCallback = null;
+
+/*
+* Icon展示时回调此代理
+*/
+public static Action<string, string> UPIconDidShowCallback = null;
+
+/*
+* Icon点击时回调此代理
+*/
+public static Action<string, string> UPIconDidClickCallback = null;
+```

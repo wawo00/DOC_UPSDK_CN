@@ -17,6 +17,7 @@ Contents:
    ../Unity/unity05_3_sample_adload
    ../Unity/unity05_4_sample_adshow
    ../Unity/unity05_5_sample_banner
+   ../Unity/unity05_8_sample_icon
    ../Unity/unity05_6_sample_gdpr
    ../Unity/unity05_7_sample_demo
 
