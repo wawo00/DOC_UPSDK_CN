@@ -17,5 +17,6 @@ UPSDK尽管做了很好地集成与封装，但仍然有不少用户在首次接
    ../IOS/ios04_banner_catalog
    ../IOS/ios05_inter
    ../IOS/ios06_video
+   ../IOS/ios09_icon
    ../IOS/ios07_gdpr
    ../IOS/ios08_demo
