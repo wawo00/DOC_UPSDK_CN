@@ -1,4 +1,13 @@
 ## Android SDK
+
+### 海外版本
+
+[Eclipe SDK v3.0.05 ](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_3.0.05_eclipse.zip "Eclipe SDK v3.0.05 ")
+
+[Android Studio SDK v3.0.05](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_3.0.05_AndroidStudio.zip "Android Studio SDK v3.0.05 ")
+
+### 国内版本
+
 [Eclipe SDK v3.0.05 ](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_3.0.05_eclipse.zip "Eclipe SDK v3.0.05 ")
 
 [Android Studio SDK v3.0.05](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_3.0.05_AndroidStudio.zip "Android Studio SDK v3.0.05 ")
@@ -11,13 +20,29 @@
 
 ## Unity SDK
 
+### 海外版本
+
 [Android 3.0.05](http://cnimg.dataverse.cn/upsdk/export_3005_android.unitypackage "SDK v3.0.05")
 
 [Android & iOS 3.0.05](http://cnimg.dataverse.cn/upsdk/export_3005_both.unitypackage "SDK v3.0.05")
 
 
+### 国内版本
+
+[Android 3.0.05](http://cnimg.dataverse.cn/upsdk/export_3005_android.unitypackage "SDK v3.0.05")
+
+[Android & iOS 3.0.05](http://cnimg.dataverse.cn/upsdk/export_3005_both.unitypackage "SDK v3.0.05")
+
 ## Cocos2D-X
-#### Android
+
+#### Android 海外版本
+[Cocos-JS SDK v3.0.05 ](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_3.0.05_CocosJS.zip "Cocos-JS SDK v3.0.05 ")
+
+[Cocos-C++ SDK v3.0.05 ](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_3.0.05_CocosC++.zip "Cocos-C++ SDK v3.0.05 ")
+
+[Cocos-Lua SDK v3.0.05 ](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_3.0.05_CocosLua.zip "Cocos-Lua SDK v3.0.05 ")
+
+#### Android 国内版本
 [Cocos-JS SDK v3.0.05 ](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_3.0.05_CocosJS.zip "Cocos-JS SDK v3.0.05 ")
 
 [Cocos-C++ SDK v3.0.05 ](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_3.0.05_CocosC++.zip "Cocos-C++ SDK v3.0.05 ")
@@ -32,7 +57,11 @@
 [Cocos-Lua SDK v3.0.05 ](http://cnimg.dataverse.cn/upsdk/UPSDK_iOS_3.0.05_CocosLua.zip "Cocos-Lua SDK v3.0.05 ")
 
 ## Layabox
-#### Android
+
+#### Android海外版本
+[Layabox JavaScript v3.0.05](http://cnimg.dataverse.cn/upsdk/UPSDK_Layabox_Android_JS_3005.zip "Layabox-JavaScript SDK v3.0.05")
+
+#### Android国内版本
 [Layabox JavaScript v3.0.05](http://cnimg.dataverse.cn/upsdk/UPSDK_Layabox_Android_JS_3005.zip "Layabox-JavaScript SDK v3.0.05")
 
 #### iOS
