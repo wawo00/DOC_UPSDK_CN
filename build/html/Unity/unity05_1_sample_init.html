@@ -94,6 +94,7 @@
 <li class="toctree-l3"><a class="reference internal" href="unity05_3_sample_adload.html">Unity Plugin 广告加载</a></li>
 <li class="toctree-l3"><a class="reference internal" href="unity05_4_sample_adshow.html">Unity Plugin 广告展示</a></li>
 <li class="toctree-l3"><a class="reference internal" href="unity05_5_sample_banner.html">Unity Plugin 横幅广告</a></li>
+<li class="toctree-l3"><a class="reference internal" href="unity05_8_sample_icon.html">Unity Plugin Icon广告</a></li>
 <li class="toctree-l3"><a class="reference internal" href="unity05_6_sample_gdpr.html">GDPR</a></li>
 <li class="toctree-l3"><a class="reference internal" href="unity05_7_sample_demo.html">Unity Plugin Demo下载</a></li>
 </ul>
@@ -218,6 +219,11 @@
         UPSDK.UPRewardDidGivenCallback = new System.Action&amp;ltstring, string&gt;(actionForSdkRewardDidGiven);
         UPSDK.UPRewardDidAbandonCallback = new System.Action&amp;ltstring, string&gt;(actionForSdkRewardDidAbandon);
 
+        UPSDK.UPIconDidLoadCallback = new System.Action&lt;string,string&gt; (actionForIconAdLoadSuccess); 
+        UPSDK.UPIconDidLoadFailCallback = new System.Action&lt;string,string&gt; (actionForIconAdLoadFail); 
+        UPSDK.UPIconDidShowCallback = new System.Action&lt;string,string&gt; (actionForIconAdDidShow); 
+        UPSDK.UPIconDidClickCallback = new System.Action&lt;string,string&gt; (actionForIconAdDidClick);
+
         #if UNITY_ANDROID &amp;&amp; !UNITY_EDITOR
 
             UPSDK.UPExitAdDidShowCallback = new System.Action&amp;ltstring&gt; (actionForSdkExitAdDidShow);
@@ -306,6 +312,26 @@
 
 <span class="k">private</span> <span class="k">void</span> <span class="nf">actionForInterstitialDidClose</span><span class="p">(</span><span class="kt">string</span> <span class="n">placeId</span><span class="p">,</span> <span class="kt">string</span> <span class="n">msg</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span> <span class="p">(</span><span class="s">&quot;===&gt; actionForInterstitialDidClose Callback at: &quot;</span> <span class="p">+</span> <span class="n">placeId</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">private</span> <span class="k">void</span> <span class="nf">actionForIconAdLoadSuccess</span><span class="p">(</span><span class="kt">string</span> <span class="n">placeId</span><span class="p">,</span><span class="kt">string</span> <span class="n">msg</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span> <span class="p">(</span><span class="s">&quot;===&gt; actionForIconAdLoadSuccess Callback at:&quot;</span> <span class="p">+</span> <span class="n">placeId</span><span class="p">);</span>
+    <span class="n">showTextMessage</span> <span class="p">(</span><span class="s">&quot;IconAd加载成功回调 ===&gt;&quot;</span> <span class="p">+</span> <span class="n">placeId</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">private</span> <span class="k">void</span> <span class="nf">actionForIconAdLoadFail</span><span class="p">(</span><span class="kt">string</span> <span class="n">placeId</span><span class="p">,</span><span class="kt">string</span> <span class="n">msg</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span> <span class="p">(</span><span class="s">&quot;===&gt; actionForIconAdLoadFail Callback at:&quot;</span> <span class="p">+</span> <span class="n">placeId</span><span class="p">);</span>
+    <span class="n">showTextMessage</span> <span class="p">(</span><span class="s">&quot;IconAd加载失败回调 ===&gt;&quot;</span> <span class="p">+</span> <span class="n">placeId</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">private</span> <span class="k">void</span> <span class="nf">actionForIconAdDidShow</span><span class="p">(</span><span class="kt">string</span> <span class="n">placeId</span><span class="p">,</span><span class="kt">string</span> <span class="n">msg</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span> <span class="p">(</span><span class="s">&quot;===&gt; actionForIconAdDidShow Callback at:&quot;</span> <span class="p">+</span> <span class="n">placeId</span><span class="p">);</span>
+    <span class="n">showTextMessage</span> <span class="p">(</span><span class="s">&quot;展示IconAd ===&gt;&quot;</span> <span class="p">+</span> <span class="n">placeId</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">private</span> <span class="k">void</span> <span class="nf">actionForIconAdDidClick</span><span class="p">(</span><span class="kt">string</span> <span class="n">placeId</span><span class="p">,</span><span class="kt">string</span> <span class="n">msg</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span> <span class="p">(</span><span class="s">&quot;===&gt; actionForIconAdDidClick Callback at:&quot;</span> <span class="p">+</span> <span class="n">placeId</span><span class="p">);</span>
+    <span class="n">showTextMessage</span> <span class="p">(</span><span class="s">&quot;点击IconAd ===&gt;&quot;</span> <span class="p">+</span> <span class="n">placeId</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>

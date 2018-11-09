@@ -62,13 +62,13 @@ public static string getAbtConfig(string placementId);
 public static bool isInterstitialReady(string cpPlaceId);
 
 /*
-* 判断激励视屏是否可以加载播放
+* 判断激励视频是否可以加载播放
 * 请不要在代码中持续不断地调用此方法来实现某个特定目标，如更新UI按钮的状态。对于这种情况，请用setRewardVideoLoadCallback()设置回调监听。
 */
 public static bool isRewardReady();
 
 /*
-* 显示激励视屏，参数cpCustomId为CP自定义标识，不能为空(广告无法显示)
+* 显示激励视频，参数cpCustomId为CP自定义标识，不能为空(广告无法显示)
 */
 public static void showRewardAd(string cpCustomId);
 
@@ -112,6 +112,23 @@ public static void hideBannerAdAtBottom();
 public static void removeBannerAdAt(string cpPlaceId);
 
 /*
+* 根据坐标、旋转角度、广告位，展示UPSDK的Icon广告
+* @param x: 起始位横坐标
+* @param y: 起始位纵坐标
+* @param width: 宽度
+* @param height: 高度
+* @param rotationAngle: 顺时针旋转角度
+* @param cpPlaceId: 广告位标识符
+*/
+public static void showIconAd(double x, double y, double width, double height, double rotationAngle, string cpPlaceId);
+
+/*
+* 根据广告位，删除aUPSDK的Icon广告
+* @param cpPlaceId: 广告位标识符
+*/
+public static void removeIconAdAt(string cpPlaceId);
+
+/*
 * 设置Android平台 manifest.xml中所定义的packagename
 * 2031以后，此方法被废弃，UPSDK初始化后不需要再调用
 */
@@ -123,7 +140,7 @@ public static void setManifestPackageName(string packagename);
 public static void onBackPressed();
 
 /*
- * upltv激励视屏广告加载回调接口
+ * upltv激励视频广告加载回调接口
  * @param success 第一个参数，加载成功后的回调
  * @param fail 第二个参数，加载失败后的回调
  * 
@@ -146,7 +163,7 @@ public static void setRewardVideoLoadCallback(Action<string,string> success, Act
 public static void setIntersitialLoadCallback(string cpPlaceId, Action<string,string> success, Action<string, string> fail)
 
 /*
- * 用于展示upltv的激励视屏广告调试界面
+ * 用于展示upltv的激励视频广告调试界面
  * supported from 2028
  */
 public static void showRewardDebugView();

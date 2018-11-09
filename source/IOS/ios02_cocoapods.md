@@ -22,11 +22,11 @@ use_frameworks!
 
 target ‘YourAppName’ do
   source 'https://github.com/guojunliu/AvidlyAdsSDK-SpecsRepo.git'
-  pod 'UPSDK', '~> 3.0.03'
+  pod 'UPSDK', '~> 3.0.06'
 end
 ```
 
-其中`~> 3.0.03`表示要下载的版本，请选择需要的版本（`建议使用最新版本`）
+其中`~> 3.0.06`表示要下载的版本，请选择需要的版本（`建议使用最新版本`）
 
 然后进入您的工程目录，运行以下命令
 
@@ -35,6 +35,8 @@ pod install
 ```
 
 完成
+
+`注意：因GitHub对较大文件兼容性较差，故可能出现GoogleMobileAds.framework此SDK下载不完整的情况。请注意检查此SDK的大小，如发现为100M以下，请手动下载此SDK，并添加至项目` 
 
 
 ### 工程配置

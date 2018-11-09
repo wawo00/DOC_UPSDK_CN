@@ -89,6 +89,7 @@
 <li class="toctree-l2"><a class="reference internal" href="ios04_banner_catalog.html">横幅广告</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ios05_inter.html">插屏广告</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ios06_video.html">激励视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ios09_icon.html">动态Icon广告</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ios07_gdpr.html">GDPR</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ios08_demo.html">Demo 下载</a></li>
 </ul>
@@ -178,16 +179,17 @@ use_frameworks!
 
 target ‘YourAppName’ do
   source &#39;https://github.com/guojunliu/AvidlyAdsSDK-SpecsRepo.git&#39;
-  pod &#39;UPSDK&#39;, &#39;~&gt; 3.0.03&#39;
+  pod &#39;UPSDK&#39;, &#39;~&gt; 3.0.06&#39;
 end
 </pre></div>
 </div>
-<p>其中<code class="docutils literal notranslate"><span class="pre">~&gt;</span> <span class="pre">3.0.03</span></code>表示要下载的版本，请选择需要的版本（<code class="docutils literal notranslate"><span class="pre">建议使用最新版本</span></code>）</p>
+<p>其中<code class="docutils literal notranslate"><span class="pre">~&gt;</span> <span class="pre">3.0.06</span></code>表示要下载的版本，请选择需要的版本（<code class="docutils literal notranslate"><span class="pre">建议使用最新版本</span></code>）</p>
 <p>然后进入您的工程目录，运行以下命令</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pod</span> <span class="n">install</span>
 </pre></div>
 </div>
 <p>完成</p>
+<p><code class="docutils literal notranslate"><span class="pre">注意：因GitHub对较大文件兼容性较差，故可能出现GoogleMobileAds.framework此SDK下载不完整的情况。请注意检查此SDK的大小，如发现为100M以下，请手动下载此SDK，并添加至项目</span></code></p>
 <div class="section" id="">
 <span id="id1"></span><h2>工程配置<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
 <p>1 在info.plist中加入以下节点，以兼容http模式</p>

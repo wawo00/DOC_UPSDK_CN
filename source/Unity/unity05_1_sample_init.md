@@ -47,6 +47,11 @@ public void 调用onButton_init_Click()
         UPSDK.UPRewardDidGivenCallback = new System.Action&ltstring, string>(actionForSdkRewardDidGiven);
         UPSDK.UPRewardDidAbandonCallback = new System.Action&ltstring, string>(actionForSdkRewardDidAbandon);
 
+		UPSDK.UPIconDidLoadCallback = new System.Action<string,string> (actionForIconAdLoadSuccess); 
+		UPSDK.UPIconDidLoadFailCallback = new System.Action<string,string> (actionForIconAdLoadFail); 
+		UPSDK.UPIconDidShowCallback = new System.Action<string,string> (actionForIconAdDidShow); 
+		UPSDK.UPIconDidClickCallback = new System.Action<string,string> (actionForIconAdDidClick);
+
         #if UNITY_ANDROID && !UNITY_EDITOR
 
             UPSDK.UPExitAdDidShowCallback = new System.Action&ltstring> (actionForSdkExitAdDidShow);
@@ -138,5 +143,25 @@ private void actionForInterstitialDidClick(string placeId, string msg) {
 
 private void actionForInterstitialDidClose(string placeId, string msg) {
     Debug.Log ("===> actionForInterstitialDidClose Callback at: " + placeId);
+}
+
+private void actionForIconAdLoadSuccess(string placeId,string msg) {
+	Debug.Log ("===> actionForIconAdLoadSuccess Callback at:" + placeId);
+	showTextMessage ("IconAd加载成功回调 ===>" + placeId);
+}
+
+private void actionForIconAdLoadFail(string placeId,string msg) {
+	Debug.Log ("===> actionForIconAdLoadFail Callback at:" + placeId);
+	showTextMessage ("IconAd加载失败回调 ===>" + placeId);
+}
+
+private void actionForIconAdDidShow(string placeId,string msg) {
+	Debug.Log ("===> actionForIconAdDidShow Callback at:" + placeId);
+	showTextMessage ("展示IconAd ===>" + placeId);
+}
+
+private void actionForIconAdDidClick(string placeId,string msg) {
+	Debug.Log ("===> actionForIconAdDidClick Callback at:" + placeId);
+	showTextMessage ("点击IconAd ===>" + placeId);
 }
 ```

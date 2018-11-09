@@ -85,10 +85,10 @@ defaultConfig {
 Admob广告联盟的接入，我们提供两种方式，在网络允许的条件下推荐使用 **【方案一】** 来进行接入。
 
 ###### 1.**【方案一】**
-在`build.gradle`文件中，通过compile命令从Google的远程仓库下载gms play-service15.0.1的包。
+在`build.gradle`文件中，通过compile命令从Google的远程仓库下载gms play-service16.0.0的包。
     
 	dependencies {
-        compile 'com.google.android.gms:play-services-ads:15.0.1'
+        compile 'com.google.android.gms:play-services-ads:16.0.0'
     }
 
 
@@ -101,16 +101,16 @@ Admob广告联盟的接入，我们提供两种方式，在网络允许的条件
 参考如下方式修改`build.gradle`文件，将Admob依赖的aar包添加到工程。
 ```groovy
 dependencies {
-    compile(name: 'play-services-ads-15.0.1', ext: 'aar')
-    compile(name: 'play-services-ads-base-15.0.1', ext: 'aar')
-    compile(name: 'play-services-ads-identifier-15.0.1', ext: 'aar')
-    compile(name: 'play-services-ads-lite-15.0.1', ext: 'aar')
-    compile(name: 'play-services-basement-15.0.1', ext: 'aar')
-    compile(name: 'play-services-gass-15.0.1', ext: 'aar')
+    compile(name: 'play-services-ads-16.0.0', ext: 'aar')
+    compile(name: 'play-services-ads-base-16.0.0', ext: 'aar')
+    compile(name: 'play-services-ads-identifier-16.0.0', ext: 'aar')
+    compile(name: 'play-services-ads-lite-16.0.0', ext: 'aar')
+    compile(name: 'play-services-basement-16.0.0', ext: 'aar')
+    compile(name: 'play-services-gass-16.0.0', ext: 'aar')
    }
 ```
 
-> 特别地，如果您的工程中已经存在与Avidly ADSDK所依赖的gms play不同版时，请用更高的版本替换低版本
+> 特别地，如果您的工程中已经存在与UPSDK所依赖的gms play不同版时，请用更高的版本替换低版本
 
 #### 2.添加其他广告联盟
 为了保证您能获得更大收益，请将广告联盟包尽可能多地将其它联盟广告的aar文件添加到您的项目中。
@@ -234,5 +234,5 @@ dependencies {
 如果您的项目开启了混淆功能，请将 `proguard-project.txt` 文件中的内容复制粘贴到当前项目使用的 混淆配置文件中，否则会因为混淆的原因导致程序无法找到类文件出现崩溃异常。
 
 ### 七、65535方法数限制问题解决方案
-如果因为接入UPSDK导致方法数超过65535，无法正常打包，请使用Android的分包方案打包。关于分包若有疑问，请阅读使用我们提供的[MultiDex分包方案](http://docs.upltv.com/docs/show/78 "如下方案")。
+如果因为接入UPSDK导致方法数超过65535，无法正常打包，请使用Android的分包方案打包。关于分包若有疑问，请阅读使用我们提供的[MultiDex分包方案](http://docs.upltv.com/zh/master/Android/android02_65535.html "如下方案")。
 
