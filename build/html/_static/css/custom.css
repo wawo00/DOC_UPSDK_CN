@@ -43,21 +43,21 @@ div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(1) > str
 }
 
 
-div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(1) > dd:nth-child(1) > a {
+div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(1) > dd:first-of-type > a {
  visibility: hidden;
 }
 
-div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(1) > dd:nth-child(1) > a:after {
+div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(1) > dd:first-of-type > a:after {
  content: 'English';
  visibility: visible;
  display: block;
 }
 
-div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(1) > dd:nth-child(2) > a {
+div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(1) > dd:nth-of-type(2) > a {
  visibility: hidden;
 }
 
-div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(1) > dd:nth-child(2) > a:after {
+div.rst-versions > div.rst-other-versions > div.injected > dl:nth-child(1) > dd:nth-of-type(2) > a:after {
  content: '한국어';
  visibility: visible;
  display: block;
