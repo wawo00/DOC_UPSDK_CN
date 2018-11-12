@@ -2,6 +2,8 @@
 UPSDK Layabox JavaScript帮助文档
 ===================================
 
+我们 **强烈推荐使用android 26版本进行游戏的打包和编译，如果使用android 28可能会出现错误**。
+
 UPSDK LayaboxJavaScript插件包括了对Android与iOS平台不同联盟的广告库的引用与集成。由于Layabox版本较多，当前使用的是1.7.20版本，对于不支持的版本，请用原生方式完成UPSDK的接入。
 
 --------

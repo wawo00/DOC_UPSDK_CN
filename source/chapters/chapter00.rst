@@ -2,6 +2,9 @@
 UPSDK 概述
 =============================
 
+
+
+
 --------
 UPSDK 简介
 --------
@@ -22,9 +25,13 @@ UPSDK 以提高游戏广告收益和游戏用户长期价值为努力方向。�
 UPSDK 下载
 --------
 
+我们 **强烈推荐使用android 26版本进行游戏的打包和编译，如果使用android 28可能会出现错误**。
+
 如果你还未下载或更新至 UPSDK 的最新版本，请跳转到 `UPSDK 下载页 <http://docs.upltv.com/zh/master/chapters/chapter09.html>`_ 下载适合你的版本。
 
 > 我们分别针对Eclipse与AndroidStudio工程结构的差异做了设计优化，下载时请根据你实际的开发工具选择匹配的版本。
+
+
 
 如果你是Unity工程，我们 ***强烈*** 推荐使用*Unity Plugin*，这样可以更快更方便地完成UPSDK的接入工作。请点击
 `Unity Plugin下载 <http://docs.upltv.com/zh/master/Download/Download_Guide.html#unity-sdk>`_ 了解更多相关内容。
