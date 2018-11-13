@@ -1,7 +1,7 @@
 ## XCode
 
 ### 下载UPSDK包
-首先从 [IOS-SDK下载页](http://docc.upltv.com/docs/show/13 "SDK下载页面") 下载最新的 SDK 包，解压后的目录包含如下两个文件：
+首先从 [IOS-SDK下载页](../chapters/chapter09.html "SDK下载页面") 下载最新的 SDK 包，解压后的目录包含如下两个文件：
 
 - UPSDK.framework
 - UPSDK.bundle
