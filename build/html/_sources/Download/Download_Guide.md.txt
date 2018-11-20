@@ -86,4 +86,4 @@
 [gms v16.0.0](http://cnimg.dataverse.cn/upsdk/gms16.0.0.zip "gms_v16.0.0")
 
 ## 更新日志
-**当前版本号：3.0.05**
+**当前版本号：3.0.06**
