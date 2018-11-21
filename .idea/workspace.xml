@@ -166,10 +166,11 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -233,16 +234,15 @@
       <workItem from="1541666467908" duration="4506000" />
       <workItem from="1541765901175" duration="969000" />
       <workItem from="1542088295328" duration="1794000" />
-      <workItem from="1542090300330" duration="628000" />
+      <workItem from="1542090300330" duration="1264000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56468000" />
+    <option name="totallyTimeSpent" value="57104000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1689008" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -253,7 +253,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.4336662" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.34236804" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.58487874" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
