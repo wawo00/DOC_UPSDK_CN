@@ -39,8 +39,8 @@ UPSDK的本地文件中，提供了Admob与Facebook 两种广告平台的aar依�
 
     dependencies {
         // your other setting
-        // 请将UPAdsSdk_3.0.33替换成实际的文件名
-        compile(name: 'UPAdsSdk_3.0.03', ext: 'aar')
+        // 请将UPAdsSdk_3.0.06替换成实际的文件名
+        compile(name: 'UPAdsSdk_3.0.06', ext: 'aar')
     }
 
 至此，UPSDK的aar包已经成功配置到你的工程中，静等gradle编译生效。但UPSDK的工程导入工作还未完成，还差重要的最后一步工作要做：**添加其它依赖库**。
@@ -118,7 +118,7 @@ UPSDK的本地文件中，提供了Admob与Facebook 两种广告平台的aar依�
 ```groovy
 dependencies {
    //core lib
-   compile(name: 'UPAdsSdk_Cpp_3.0.04_dex', ext: 'aar')
+   compile(name: 'UPAdsSdk_3.0.06', ext: 'aar')
    //support libs
    compile(name: 'animated-vector-drawable-26.1.0', ext: 'aar')
     compile(name: 'appcompat-v7-26.1.0', ext: 'aar')
