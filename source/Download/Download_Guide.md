@@ -59,13 +59,14 @@
 ## CocosCreator
 
 #### Android 海外版本
-[CocosCreator SDK v3.0.06 ](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_foreign_3.0.06_CocosJS.zip "CocosCreator SDK v3.0.06 ")
+[CocosCreator SDK v3.0.06 ](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_foreign_CocosCreator_3.0.06.zip "CocosCreator SDK v3.0.06 ")
 
 #### Android 国内版本
-[CocosCreator SDK v3.0.06 ](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_domestic_3.0.06_CocosJS.zip "CocosCreator SDK v3.0.06 ")
+[CocosCreator SDK v3.0.06 ](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_domestic_CocosCreator_3.0.06.zip
+ "CocosCreator SDK v3.0.06 ")
 
 #### iOS
-[CocosCreator SDK v3.0.06 ](http://cnimg.dataverse.cn/upsdk/UPSDK_iOS_3.0.06_CocosJS.zip "CocosCreator SDK v3.0.06 ")
+[CocosCreator SDK v3.0.06 ](http://cnimg.dataverse.cn/upsdk/UPSDK_iOS_CocosCreator_3.0.06.zip "CocosCreator SDK v3.0.06 ")
 
 ## Layabox
 
