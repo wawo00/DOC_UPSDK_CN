@@ -23,6 +23,30 @@ public static void setManifestPackageName(string packagename)
 ```
 > 为了避免出错，请将AndroidManifest.xml文件中，Application节点对应的packagename属性正确传递到setManifestPackageName()方法中。
 
+
+### setCustomerId()
+
+对于国内发行的产品，由于无法正常收集`GAID`，导致用户新增计算错误，从3003的版本开始增加`PolyADSDK.setCustomerIdForAndroid();`方法，其中参数取**AndroidId**的值。
+请在UPAdsSdk.initPolyAdSDK()之前调用此方法。
+
+至于如何获得androidId的值请参考下面示例代码
+
+```java
+
+  private String GetAndroidID()
+    {
+        AndroidJavaClass up = new AndroidJavaClass ("com.unity3d.player.UnityPlayer");
+        AndroidJavaObject currentActivity = up.GetStatic<AndroidJavaObject> ("currentActivity");
+        AndroidJavaObject contentResolver = currentActivity.Call<AndroidJavaObject> ("getContentResolver");  
+        AndroidJavaClass secure = new AndroidJavaClass ("android.provider.Settings$Secure");
+        string android_id = secure.CallStatic<string> ("getString", contentResolver, "android_id");
+        return android_id;
+    }
+
+```
+
+
+
 #### 示例代码
 在示例代码中，通过点击UI上的初始化按钮，调用onButton_init_Click()方法。即使多次点击初始化按钮，**重复调用UPSDK.initPolyAdSDK()**，但SDK的**实际初化只会进行一次**。
 ```csharp

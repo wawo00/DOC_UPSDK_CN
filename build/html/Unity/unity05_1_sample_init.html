@@ -196,6 +196,23 @@
 </div>
 <blockquote>
 <div>为了避免出错，请将AndroidManifest.xml文件中，Application节点对应的packagename属性正确传递到setManifestPackageName()方法中。</div></blockquote>
+</div>
+<div class="section" id="setcustomerid">
+<span id="setcustomerid"></span><h2>setCustomerId()<a class="headerlink" href="#setcustomerid" title="Permalink to this headline">¶</a></h2>
+<p>对于国内发行的产品，由于无法正常收集<code class="docutils literal notranslate"><span class="pre">GAID</span></code>，导致用户新增计算错误，从3003的版本开始增加<code class="docutils literal notranslate"><span class="pre">PolyADSDK.setCustomerIdForAndroid();</span></code>方法，其中参数取<strong>AndroidId</strong>的值。
+请在UPAdsSdk.initPolyAdSDK()之前调用此方法。</p>
+<p>至于如何获得androidId的值请参考下面示例代码</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span>  <span class="kd">private</span> <span class="n">String</span> <span class="nf">GetAndroidID</span><span class="o">()</span>
+    <span class="o">{</span>
+        <span class="n">AndroidJavaClass</span> <span class="n">up</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AndroidJavaClass</span> <span class="o">(</span><span class="s">&quot;com.unity3d.player.UnityPlayer&quot;</span><span class="o">);</span>
+        <span class="n">AndroidJavaObject</span> <span class="n">currentActivity</span> <span class="o">=</span> <span class="n">up</span><span class="o">.</span><span class="na">GetStatic</span><span class="o">&lt;</span><span class="n">AndroidJavaObject</span><span class="o">&gt;</span> <span class="o">(</span><span class="s">&quot;currentActivity&quot;</span><span class="o">);</span>
+        <span class="n">AndroidJavaObject</span> <span class="n">contentResolver</span> <span class="o">=</span> <span class="n">currentActivity</span><span class="o">.</span><span class="na">Call</span><span class="o">&lt;</span><span class="n">AndroidJavaObject</span><span class="o">&gt;</span> <span class="o">(</span><span class="s">&quot;getContentResolver&quot;</span><span class="o">);</span>  
+        <span class="n">AndroidJavaClass</span> <span class="n">secure</span> <span class="o">=</span> <span class="k">new</span> <span class="n">AndroidJavaClass</span> <span class="o">(</span><span class="s">&quot;android.provider.Settings$Secure&quot;</span><span class="o">);</span>
+        <span class="n">string</span> <span class="n">android_id</span> <span class="o">=</span> <span class="n">secure</span><span class="o">.</span><span class="na">CallStatic</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="o">(</span><span class="s">&quot;getString&quot;</span><span class="o">,</span> <span class="n">contentResolver</span><span class="o">,</span> <span class="s">&quot;android_id&quot;</span><span class="o">);</span>
+        <span class="k">return</span> <span class="n">android_id</span><span class="o">;</span>
+    <span class="o">}</span>
+</pre></div>
+</div>
 <div class="section" id="">
 <span id="id2"></span><h3>示例代码<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
 <p>在示例代码中，通过点击UI上的初始化按钮，调用onButton_init_Click()方法。即使多次点击初始化按钮，<strong>重复调用UPSDK.initPolyAdSDK()</strong>，但SDK的<strong>实际初化只会进行一次</strong>。</p>
