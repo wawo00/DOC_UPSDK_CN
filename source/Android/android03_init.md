@@ -20,7 +20,15 @@
 ```java
 public static void setCustomerId(String customerId)
 ```
+获得 **AndroidId** 请参考下面示例代码:
 
+```java
+public static String GetAndroid(Context context){
+    final String androidId;
+    androidId = android.provider.Settings.Secure.getString(context.getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
+    return androidId;
+ }
+```
 
 ### 开启 debug
 为方便您的接入调试，您可以在开发期间通过以下方法开启调试log，并且需要在正式发布时将其关闭

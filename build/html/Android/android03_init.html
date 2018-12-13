@@ -181,6 +181,14 @@
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setCustomerId</span><span class="o">(</span><span class="n">String</span> <span class="n">customerId</span><span class="o">)</span>
 </pre></div>
 </div>
+<p>获得 <strong>AndroidId</strong> 请参考下面示例代码:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="n">String</span> <span class="nf">GetAndroid</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">){</span>
+    <span class="kd">final</span> <span class="n">String</span> <span class="n">androidId</span><span class="o">;</span>
+    <span class="n">androidId</span> <span class="o">=</span> <span class="n">android</span><span class="o">.</span><span class="na">provider</span><span class="o">.</span><span class="na">Settings</span><span class="o">.</span><span class="na">Secure</span><span class="o">.</span><span class="na">getString</span><span class="o">(</span><span class="n">context</span><span class="o">.</span><span class="na">getContentResolver</span><span class="o">(),</span> <span class="n">android</span><span class="o">.</span><span class="na">provider</span><span class="o">.</span><span class="na">Settings</span><span class="o">.</span><span class="na">Secure</span><span class="o">.</span><span class="na">ANDROID_ID</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">androidId</span><span class="o">;</span>
+ <span class="o">}</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="debug">
 <span id="debug"></span><h2>开启 debug<a class="headerlink" href="#debug" title="Permalink to this headline">¶</a></h2>
