@@ -10,7 +10,7 @@ UPSDK LayaboxJavaScript插件包括了对Android与iOS平台不同联盟的广�
 LayaboxJavaScript 插件平台接入
 --------
 
-如果您对UPSDK LayaboxJavaScript插件包的接入还不熟悉，请仔细阅读[UPSDK LayaboxJavaScript插件接入帮助](http://docs.upltv.com/docs/show/261 "参考这里")。
+如果您对UPSDK LayaboxJavaScript插件包的接入还不熟悉，请仔细阅读 `UPSDK LayaboxJavaScript插件接入帮助 <http://docs.upltv.com/docs/show/261>`_ 。
 
 
 

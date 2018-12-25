@@ -14,13 +14,15 @@ CocosLua插件包括了对Android与iOS平台的支持，满足于在Lua中实�
 CocosLua 插件平台接入
 --------
 
-如果您对如何将UPSDK CocosLua插件包的接入到当前工程还不熟悉，请仔细阅读[UPSDK CocosLua插件接入帮助](http://docs.upltv.com/docs/show/153 "参考这里")。我们根据UPSDK CocosLua插件的特性，详细说明了Android及IOS工程下接入时的操作细节。
+如果您对如何将UPSDK CocosLua插件包的接入到当前工程还不熟悉，请仔细阅读
+`UPSDK CocosLua插件接入帮助 <http://docs.upltv.com/docs/show/153>`_ 。
+我们根据UPSDK CocosLua插件的特性，详细说明了Android及IOS工程下接入时的操作细节。
 
 --------
 CocosLua 插件使用示例
 --------
 
-如果您需要详细了解UPSDK CocosLua插件的API定义及使用示例，请阅读[UPSDK CocosLua插件使用示例](http://docs.upltv.com/docs/show/154 "参考这里")。
+如果您需要详细了解UPSDK CocosLua插件的API定义及使用示例，请阅读 `UPSDK CocosLua插件使用示例 <http://docs.upltv.com/docs/show/154>`_ 。
 
 
 .. toctree::

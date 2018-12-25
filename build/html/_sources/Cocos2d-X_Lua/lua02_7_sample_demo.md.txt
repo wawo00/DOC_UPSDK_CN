@@ -6,9 +6,9 @@ Demo以Cocos2d-x 3.16版本创建，Android平台仅支持Android Studio工程�
 
 Android:
 
- 国内 [Download](https://github.com/wawo00/UPSDK_Sample2CocosLua/tree/3006_foreign "Download")
+ 国内 [Download](https://github.com/wawo00/UPSDK_Sample2CocosLua/tree/3006_domestic "Download")
  
- 海外 [Download](https://github.com/wawo00/UPSDK_Sample2CocosLua/tree/3006_domestic  "Download")
+ 海外 [Download](https://github.com/wawo00/UPSDK_Sample2CocosLua/tree/3006_foreign  "Download")
 
 IOS:
 
