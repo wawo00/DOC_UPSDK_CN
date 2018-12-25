@@ -7,19 +7,29 @@ JavaScript 接入帮助
    
 请根据你的开发工具，选择合适的帮助文档:
 
-### Android Studio工程
 
-请浏览[Android Studio接入帮助 ](http://docs.upltv.com/docs/show/168 "Android Studio ")
+--------
+Android Studio工程
+--------
 
-### Android Eclipse工程
+请浏览 `Android Studio接入帮助 <http://docs.upltv.com/docs/show/168>`_ 
 
-请浏览[Android Eclipse接入帮助](http://docs.upltv.com/docs/show/169 "Eclipse")
+--------
+Android Eclipse工程
+--------
 
-### iOS Xcode工程
 
-请浏览[iOS Xcode接入帮助](http://docs.upltv.com/docs/show/263 "iOS")
+请浏览 `Android Eclipse接入帮助 <http://docs.upltv.com/docs/show/169>`_ 
 
-   请根据你的开发工具，选择合适的帮助文档:
+
+--------
+iOS Xcode工程
+--------
+
+
+请浏览 `iOS Xcode接入帮助 <http://docs.upltv.com/docs/show/263>`_ 
+
+请根据你的开发工具，选择合适的帮助文档:
 
 Contents:
 
