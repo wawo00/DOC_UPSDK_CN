@@ -186,7 +186,17 @@
 <span class="p">}</span> 
 </pre></div>
 </div>
-<p>然后，如果您的工程中已经含有<code class="docutils literal notranslate"><span class="pre">Application</span></code>类，那么让它继承<code class="docutils literal notranslate"><span class="pre">android.support.multidex.MultiDexApplication</span></code>类即可。</p>
+<p>如果您的游戏中未使用自定义的<code class="docutils literal notranslate"><span class="pre">Application</span></code>类，那么请在<code class="docutils literal notranslate"><span class="pre">Manifest.xml</span></code>中添加<code class="docutils literal notranslate"><span class="pre">android:name=&quot;android.support.multidex.MultiDexApplication</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="o">&lt;</span><span class="n">application</span>
+    <span class="n">android</span><span class="p">:</span><span class="n">theme</span><span class="o">=</span><span class="s2">&quot;@style/UnityThemeSelector&quot;</span>
+    <span class="n">android</span><span class="p">:</span><span class="n">icon</span><span class="o">=</span><span class="s2">&quot;@drawable/app_icon&quot;</span>
+    <span class="n">android</span><span class="p">:</span><span class="n">label</span><span class="o">=</span><span class="s2">&quot;@string/app_name&quot;</span>
+    <span class="n">android</span><span class="p">:</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;android.support.multidex.MultiDexApplication&quot;</span> 
+    <span class="o">&gt;</span>
+ <span class="o">&lt;/</span><span class="n">application</span><span class="o">&gt;</span> 
+</pre></div>
+</div>
+<p>如果您的工程中已经含有<code class="docutils literal notranslate"><span class="pre">Application</span></code>类，那么让它继承<code class="docutils literal notranslate"><span class="pre">android.support.multidex.MultiDexApplication</span></code>类即可。</p>
 <p>如果您的<code class="docutils literal notranslate"><span class="pre">Application</span></code>已经继承了其他类，不想做出改动，可以通过覆写<code class="docutils literal notranslate"><span class="pre">Application</span></code>类中的<code class="docutils literal notranslate"><span class="pre">attachBaseContext()</span></code>方法解决：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="k">class</span> <span class="nc">MyApplication</span> <span class="n">extends</span> <span class="n">FooApplication</span> <span class="p">{</span>  
     <span class="nd">@Override</span>  
