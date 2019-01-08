@@ -21,3 +21,4 @@ LayaboxJavaScript 插件平台接入
 
    ../Layabox-Js/laya01_help_catalog
    ../Layabox-Js/laya02_sample_catalog
+   ../Layabox-Js/laya02_8_permission

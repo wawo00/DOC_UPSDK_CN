@@ -27,3 +27,4 @@ CocosCreator 插件使用示例
 
    ../CocosCreator/cc_js01_help_catalog
    ../CocosCreator/cc_js02_sample_catalog
+   ../CocosCreator/cc_js02_8_permission

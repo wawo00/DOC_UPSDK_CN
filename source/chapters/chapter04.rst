@@ -24,4 +24,4 @@ UPSDK CocosCpp插件包括了对Android与IOS平台不同联盟的广告库的�
    ../Cocos2d-X_Cpp/cpp01_help_catalog
    ../Cocos2d-X_Cpp/cpp02_api
    ../Cocos2d-X_Cpp/cpp03_sample_catalog
-
+   ../Cocos2d-X_Cpp/cpp03_8_permission

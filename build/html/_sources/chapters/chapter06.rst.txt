@@ -28,3 +28,4 @@ CocosJS 插件使用示例
 
    ../Cocos2d-X_Js/js01_help_catalog
    ../Cocos2d-X_Js/js02_sample_catalog
+   ../Cocos2d-X_Js/js02_8_permission
