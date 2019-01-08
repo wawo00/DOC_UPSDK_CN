@@ -283,11 +283,10 @@
 <div class="section" id="">
 <span id="id5"></span><h3>2.添加其他广告联盟<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
 <p>为了保证您能获得更大收益，请将广告联盟包尽可能多地将其它联盟广告的aar文件添加到您的项目中。
-请参考以下方式将<code class="docutils literal notranslate"><span class="pre">Android</span> <span class="pre">Studio/aar</span></code>中命名为 <code class="docutils literal notranslate"><span class="pre">xxx_ads.aar</span></code> 的文件添加到当前工程中。</p>
+请参考以下方式将<code class="docutils literal notranslate"><span class="pre">Android</span> <span class="pre">Studio/aar</span></code>中命名为 <code class="docutils literal notranslate"><span class="pre">xxx_ads.aar</span></code> 的所有文件添加到当前工程中。</p>
 <div class="section" id="">
 <span id="id6"></span><h4>海外区域<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h4>
-<p>我们建议但局限于添加以下联盟的aar文件。
-对应的build.gradle如下：</p>
+<p>对应的build.gradle如下(以3006版本为例)：</p>
 <div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">dependencies</span> <span class="o">{</span>
     <span class="c1">//other ads-libs</span>
     <span class="c1">//gson-2.7.jar在android_support_library目录中</span>
@@ -295,7 +294,6 @@
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;facebook_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;facebook_exo_player&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
 
-    <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;mobvista_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;unity_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;vungle_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;chartboost_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
@@ -304,28 +302,25 @@
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;adcolony_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;applovin_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;playable_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
-    <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;tapjoy_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
 <span class="o">}</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="">
 <span id="id7"></span><h4>中国大陆区域<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h4>
-<p>我们建议但局限于添加以下联盟的aar文件。
-对应的build.gradle如下：</p>
+<p>对应的build.gradle如下(以3006版本为例)：</p>
 <div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">dependencies</span> <span class="o">{</span>
     <span class="c1">//other ads-libs</span>
     <span class="c1">//gson-2.7.jar在android_support_library目录中</span>
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;gson-2.7&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;jar&#39;</span><span class="o">)</span>
-   <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;centrixlink_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
-
+    <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;android-gif-drawable&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;mobvista_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
-    <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;vungle_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
+    
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;chartboost_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
-
-    <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;inmobi_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;oneway_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
+    <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;toutiao_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
     <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;playable_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
+    <span class="n">compile</span><span class="o">(</span><span class="nl">name:</span> <span class="s1">&#39;gdt_ads&#39;</span><span class="o">,</span> <span class="nl">ext:</span> <span class="s1">&#39;aar&#39;</span><span class="o">)</span>
 <span class="o">}</span>
 </pre></div>
 </div>

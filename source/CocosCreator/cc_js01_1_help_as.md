@@ -122,10 +122,10 @@ dependencies {
 
 #### 2.添加其他广告联盟
 为了保证您能获得更大收益，请将广告联盟包尽可能多地将其它联盟广告的aar文件添加到您的项目中。
-请参考以下方式将`Android Studio/aar`中命名为 `xxx_ads.aar` 的文件添加到当前工程中。
+请参考以下方式将`Android Studio/aar`中命名为 `xxx_ads.aar` 的所有文件添加到当前工程中。
+
 ###### 海外区域
-我们建议但局限于添加以下联盟的aar文件。
-对应的build.gradle如下：
+对应的build.gradle如下(以3006版本为例)：
 ```groovy
 dependencies {
     //other ads-libs
@@ -134,7 +134,6 @@ dependencies {
     compile(name: 'facebook_ads', ext: 'aar')
     compile(name: 'facebook_exo_player', ext: 'aar')
 
-    compile(name: 'mobvista_ads', ext: 'aar')
     compile(name: 'unity_ads', ext: 'aar')
     compile(name: 'vungle_ads', ext: 'aar')
     compile(name: 'chartboost_ads', ext: 'aar')
@@ -143,27 +142,24 @@ dependencies {
     compile(name: 'adcolony_ads', ext: 'aar')
     compile(name: 'applovin_ads', ext: 'aar')
     compile(name: 'playable_ads', ext: 'aar')
-    compile(name: 'tapjoy_ads', ext: 'aar')
 }
 ```
 
 ###### 中国大陆区域
-我们建议但局限于添加以下联盟的aar文件。
-对应的build.gradle如下：
+对应的build.gradle如下(以3006版本为例)：
 ```groovy
 dependencies {
     //other ads-libs
     //gson-2.7.jar在android_support_library目录中
     compile(name: 'gson-2.7', ext: 'jar')
-   compile(name: 'centrixlink_ads', ext: 'aar')
-
+    compile(name: 'android-gif-drawable', ext: 'aar')
     compile(name: 'mobvista_ads', ext: 'aar')
-    compile(name: 'vungle_ads', ext: 'aar')
+    
     compile(name: 'chartboost_ads', ext: 'aar')
-
-    compile(name: 'inmobi_ads', ext: 'aar')
     compile(name: 'oneway_ads', ext: 'aar')
+    compile(name: 'toutiao_ads', ext: 'aar')
     compile(name: 'playable_ads', ext: 'aar')
+    compile(name: 'gdt_ads', ext: 'aar')
 }
 ```
 
