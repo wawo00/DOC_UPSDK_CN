@@ -266,6 +266,37 @@
 </pre></div>
 </div>
 </div>
+<div class="section" id="upsdk">
+<span id="upsdk"></span><h2>UPSDK前后台控制<a class="headerlink" href="#upsdk" title="Permalink to this headline">¶</a></h2>
+<p>对于Android平台，我们强烈要求在当前游戏的前台后切换时，调用UPSDK以下两个接口，以便UPSDK内部做出正确的响应，避免不必要的出错。</p>
+<div class="section" id="api">
+<span id="api"></span><h3>游戏恢复到前台时调用API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">BaseProxy</span><span class="o">.</span><span class="na">onApplicationFocus</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="api">
+<span id="id3"></span><h3>游戏恢复到后台时调用API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">BaseProxy</span><span class="o">.</span><span class="na">onApplicationFocus</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+</pre></div>
+</div>
+<p>示例代码：</p>
+<p>在您初始化banner的activity对象中:</p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span>    <span class="nd">@Override</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onResume</span><span class="o">()</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">.</span><span class="na">onResume</span><span class="o">();</span>
+       <span class="n">BaseProxy</span><span class="o">.</span><span class="na">onApplicationFocus</span><span class="o">(</span><span class="kc">true</span><span class="o">);</span>
+    <span class="o">}</span>
+
+    <span class="nd">@Override</span>
+    <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onPause</span><span class="o">()</span> <span class="o">{</span>
+        <span class="kd">super</span><span class="o">.</span><span class="na">onPause</span><span class="o">();</span>
+        <span class="n">BaseProxy</span><span class="o">.</span><span class="na">onApplicationFocus</span><span class="o">(</span><span class="kc">false</span><span class="o">);</span>
+    <span class="o">}</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 
 

@@ -96,3 +96,32 @@ protected void onCreate(Bundle savedInstanceState) {
         }, 200);
 }
 ```
+###  UPSDK前后台控制
+对于Android平台，我们强烈要求在当前游戏的前台后切换时，调用UPSDK以下两个接口，以便UPSDK内部做出正确的响应，避免不必要的出错。
+
+#### 游戏恢复到前台时调用API
+```java
+BaseProxy.onApplicationFocus(true);
+```
+#### 游戏恢复到后台时调用API
+```java
+BaseProxy.onApplicationFocus(false);
+```
+
+示例代码：
+
+在您初始化banner的activity对象中:
+
+```java
+    @Override
+    protected void onResume() {
+        super.onResume();
+       BaseProxy.onApplicationFocus(true);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        BaseProxy.onApplicationFocus(false);
+    }
+```

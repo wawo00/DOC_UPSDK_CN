@@ -30,6 +30,36 @@ public static String GetAndroid(Context context){
  }
 ```
 
+###  UPSDK前后台控制
+对于Android平台，我们强烈要求在当前游戏的前台后切换时，调用UPSDK以下两个接口，以便UPSDK内部做出正确的响应，避免不必要的出错。
+
+#### 游戏恢复到前台时调用API
+```java
+UPAdsSdk.onApplicationResume();
+```
+#### 游戏恢复到后台时调用API
+```java
+UPAdsSdk.onApplicationPause();
+```
+
+示例代码：
+
+通常Cocos2d-X引擎生成的游戏Activity，继承于org.cocos2dx.lib.Cocos2dxActivity的子类。在Demo工程中，此类是AppActivity。
+
+```java
+    @Override
+    protected void onResume() {
+        super.onResume();
+        UPAdsSdk.onApplicationResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        UPAdsSdk.onApplicationPause();
+    }
+```
+
 ### 开启 debug
 为方便您的接入调试，您可以在开发期间通过以下方法开启调试log，并且需要在正式发布时将其关闭
 
