@@ -155,7 +155,6 @@ dependencies {
     compile(name: 'android-gif-drawable', ext: 'aar')
     compile(name: 'mobvista_ads', ext: 'aar')
     
-    compile(name: 'chartboost_ads', ext: 'aar')
     compile(name: 'oneway_ads', ext: 'aar')
     compile(name: 'toutiao_ads', ext: 'aar')
     compile(name: 'playable_ads', ext: 'aar')
