@@ -77,7 +77,7 @@
 [Layabox JavaScript v3.0.06.4](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_domestic_3006_Layabox_JS.zip "Layabox-JavaScript SDK v3.0.06")
 
 #### iOS
-[Layabox JavaScript v3.0.06.4](http://cnimg.dataverse.cn/upsdk/UPSDK_Layabox_JS_3006.zip "Layabox-JavaScript SDK v3.0.06")
+[Layabox JavaScript v3.0.06.4](http://cnimg.dataverse.cn/upsdk/UPSDK_Layabox_iOS_JS_3006.zip "Layabox-JavaScript SDK v3.0.06")
 
 ## Egret
 
