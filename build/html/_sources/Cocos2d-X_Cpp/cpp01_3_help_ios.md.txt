@@ -3,7 +3,7 @@
 本接入文档以cocos2d-X 3.16为蓝本，如果您使用Cocos2d-X其它版本，不同之处请灵活处理。
 
 ### 1 下载SDK包
-首先从 [UPSDK下载页](http://docc.upltv.com/docs/show/13 "SDK下载页面") 下载UPSDK CppPlugin包，解压后的目录包含如下三个文件：
+首先从 [UPSDK下载页](http://docs.upltv.com/zh/master/chapters/chapter10.html "SDK下载页面") 下载UPSDK CppPlugin包，解压后的目录包含如下三个文件：
 - `UPSDK.framework` 这是UPSDK的主包，请务必添加到当前工程中
 - `UPSDK.bundle` UPSDK主包需要访问的外部文件资源，请务必添加到当前工程中
 - `UpltvCppBridge` 此目录包含一些*.cpp源码文件，用于桥接当前Cocos2d-X cpp工程与UPSDK广告接口调用
