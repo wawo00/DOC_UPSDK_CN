@@ -30,6 +30,10 @@ public static String GetAndroid(Context context){
  }
 ```
 
+### 动态权限申请
+
+对于国内发行的产品，请不要忘记申请需要的权限以免影响广告在android 6.0版本设备上的展示，详细实现方式可参考[动态权限申请](http://docs.upltv.com/zh/master/Android/android09_permission.html)。
+
 ###  UPSDK前后台控制
 对于Android平台，我们强烈要求在当前游戏的前台后切换时，调用UPSDK以下两个接口，以便UPSDK内部做出正确的响应，避免不必要的出错。
 

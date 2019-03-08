@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="横幅广告" href="egret02_3_sample_banner.html" />
     <link rel="prev" title="SDK初始化" href="egret02_1_sample_init.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -169,9 +172,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="a-b-test">
-<span id="a-b-test"></span><h1>A/B Test接口调用<a class="headerlink" href="#a-b-test" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="a-b-test">
-<span id="id1"></span><h2>1. A/B Test初始化<a class="headerlink" href="#a-b-test" title="Permalink to this headline">¶</a></h2>
+<h1>A/B Test接口调用<a class="headerlink" href="#a-b-test" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>1. A/B Test初始化<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>进行A/B测试时，请在初始化SDK之后，调用此方法完成A/B Test初始化。</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span> <span class="cm">/*</span>
 <span class="cm">     A/B Testing初始化广告配置</span>
@@ -197,14 +200,14 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="a-b-test">
-<span id="id2"></span><h2>2. 获取A/B Test的结果<a class="headerlink" href="#a-b-test" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h2>2. 获取A/B Test的结果<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>完成A/B Test初始化后，通过此方法获取结果。</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm">     完成A/B Testing初始化后，通过此方法获取结果</span>
 <span class="cm">     为了保证正确获取结果，调用时间建议延后initAbtConfigJson() 2秒以上</span>
 <span class="cm">     cpPlaceId ：        string类型， 广告位</span>
-<span class="cm">     callback ：回调函数</span>
+<span class="cm">	 callback ：回调函数</span>
 <span class="cm">    */</span>
     <span class="kr">static</span> <span class="nx">getAbtConfig</span><span class="p">(</span><span class="nx">cpPlaceId</span><span class="o">:</span><span class="nx">string</span><span class="p">,</span><span class="nx">callback</span><span class="o">:</span><span class="p">(</span><span class="nx">config</span><span class="o">:</span><span class="nx">any</span><span class="p">)=&gt;</span><span class="k">void</span><span class="p">)</span>
 </pre></div>
@@ -228,7 +231,7 @@
         <a href="egret02_3_sample_banner.html" class="btn btn-neutral float-right" title="横幅广告" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="egret02_1_sample_init.html" class="btn btn-neutral" title="SDK初始化" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="egret02_1_sample_init.html" class="btn btn-neutral float-left" title="SDK初始化" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -254,27 +257,16 @@
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

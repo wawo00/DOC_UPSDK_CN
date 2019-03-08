@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="A/B Test接口调用" href="cpp03_2_sample_abtest.html" />
     <link rel="prev" title="CppPlugin 使用实例" href="cpp03_sample_catalog.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -170,20 +173,20 @@
            <div itemprop="articleBody">
             
   <div class="section" id="sdk">
-<span id="sdk"></span><h1>SDK初始化<a class="headerlink" href="#sdk" title="Permalink to this headline">¶</a></h1>
+<h1>SDK初始化<a class="headerlink" href="#sdk" title="Permalink to this headline">¶</a></h1>
 <p>仅以Xcode工程作示例讲解，若你使用的是其它工程请参考Xcode工程操作，若有不便敬请谅解。</p>
 <p>UPLTV SDK的初始化非常简单。</p>
-<div class="section" id="">
-<span id="id1"></span><h2>在工程中添加如下引用<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h2>在工程中添加如下引用<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;UpltvBridge.h&quot;</span><span class="cp"></span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="upsdk">
-<span id="upsdk"></span><h2>初始化UPSDK<a class="headerlink" href="#upsdk" title="Permalink to this headline">¶</a></h2>
+<h2>初始化UPSDK<a class="headerlink" href="#upsdk" title="Permalink to this headline">¶</a></h2>
 <p>初始化的方式有两种，我们推荐第一种初始化：</p>
-<div class="section" id="upsdk">
-<span id="id2"></span><h3>1. 根据区域参数初始化UPSDK<a class="headerlink" href="#upsdk" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h3>1. 根据区域参数初始化UPSDK<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm">* 初始化upltv广告sdk</span>
 <span class="cm">*/</span>
@@ -199,8 +202,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="upsdk">
-<span id="id3"></span><h3>2. 根据区域参数及回调函数初始化UPSDK<a class="headerlink" href="#upsdk" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h3>2. 根据区域参数及回调函数初始化UPSDK<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>如果想监听初始化结果是否成功，可以使用此方法。</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm">* @param callback SDK初始化完成后的回调接口, 回调接口包含一个布尔参数 callback(boolean)，true表示成功，否则失败</span>
@@ -237,7 +240,7 @@
 </div>
 </div>
 <div class="section" id="setcustomerid">
-<span id="setcustomerid"></span><h3>3. setCustomerId()<a class="headerlink" href="#setcustomerid" title="Permalink to this headline">¶</a></h3>
+<h3>3. setCustomerId()<a class="headerlink" href="#setcustomerid" title="Permalink to this headline">¶</a></h3>
 <p>仅Android支持，对于非GP的包，可以传androidid，避免用户新增统计错误。</p>
 <div class="highlight-asp notranslate"><div class="highlight"><pre><span></span>/**
 * 请在初始化SDK之前调用
@@ -249,7 +252,7 @@ UpltvBridge::setCustomerId(androidid);
 </div>
 </div>
 <div class="section" id="onapplicationfocus">
-<span id="onapplicationfocus"></span><h3>4. onApplicationFocus()添加<a class="headerlink" href="#onapplicationfocus" title="Permalink to this headline">¶</a></h3>
+<h3>4. onApplicationFocus()添加<a class="headerlink" href="#onapplicationfocus" title="Permalink to this headline">¶</a></h3>
 <p>请参考以下代码在当前工程的AppDelegate类中正确添加onApplicationFocus()方法，以便通知UPSDK游戏前台切换变化。</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span> <span class="n">AppDelegate</span><span class="o">::</span><span class="n">applicationDidEnterBackground</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// 进入后台时，调用UpltvBridge::onApplicationFocus(false)</span>
@@ -294,7 +297,7 @@ UpltvBridge::setCustomerId(androidid);
         <a href="cpp03_2_sample_abtest.html" class="btn btn-neutral float-right" title="A/B Test接口调用" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="cpp03_sample_catalog.html" class="btn btn-neutral" title="CppPlugin 使用实例" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="cpp03_sample_catalog.html" class="btn btn-neutral float-left" title="CppPlugin 使用实例" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -320,27 +323,16 @@ UpltvBridge::setCustomerId(androidid);
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

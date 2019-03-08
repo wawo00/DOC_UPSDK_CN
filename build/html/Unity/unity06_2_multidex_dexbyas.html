@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="使用Unity 解决65535问题" href="unity06_3_multidex_dexbyunity.html" />
     <link rel="prev" title="65535方法数超量问题" href="unity06_1_multidex_guide.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -168,21 +171,21 @@
            <div itemprop="articleBody">
             
   <div class="section" id="android-studio-65535">
-<span id="android-studio-65535"></span><h1>使用Android Studio 解决65535问题<a class="headerlink" href="#android-studio-65535" title="Permalink to this headline">¶</a></h1>
+<h1>使用Android Studio 解决65535问题<a class="headerlink" href="#android-studio-65535" title="Permalink to this headline">¶</a></h1>
 <p>Unity 5.5开始支持Gradle build system，对于65535超量的错误可以考虑将工程导出到Android Studio通过分包来解决。</p>
 <div class="section" id="android-studio">
-<span id="android-studio"></span><h2>1.导出到Android Studio工程<a class="headerlink" href="#android-studio" title="Permalink to this headline">¶</a></h2>
-<p><img alt="3333" src="http://docc.upltv.com/uploads/201807/5b39cc6bd83bb_5b39cc6b.png" /></p>
+<h2>1.导出到Android Studio工程<a class="headerlink" href="#android-studio" title="Permalink to this headline">¶</a></h2>
+<p><img alt="3333" src="http://docc.upltv.com/uploads/201807/5b39cc6bd83bb_5b39cc6b.png" />3333</p>
 </div>
-<div class="section" id="android-studio">
-<span id="id1"></span><h2>2.打开Android Studio工程<a class="headerlink" href="#android-studio" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h2>2.打开Android Studio工程<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>必须安装Android Studio2.2.3及上版本。</p>
-<p><img alt="4444" src="http://docc.upltv.com/uploads/201807/5b39ccc80a994_5b39ccc8.png" /></p>
+<p><img alt="4444" src="http://docc.upltv.com/uploads/201807/5b39ccc80a994_5b39ccc8.png" />4444</p>
 </div>
 <div class="section" id="build-gradle">
-<span id="build-gradle"></span><h2>3.配置build.gradle<a class="headerlink" href="#build-gradle" title="Permalink to this headline">¶</a></h2>
+<h2>3.配置build.gradle<a class="headerlink" href="#build-gradle" title="Permalink to this headline">¶</a></h2>
 <p>如果你的gradle版本过低，请设置到2.2.3或以上。
-<img alt="555" src="http://docc.upltv.com/uploads/201807/5b39cd2136c17_5b39cd21.png" /></p>
+<img alt="555" src="http://docc.upltv.com/uploads/201807/5b39cd2136c17_5b39cd21.png" />555</p>
 <p>在build.gradle文件中添加分包设置：</p>
 <div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">android</span> <span class="o">{</span>
     <span class="n">defaultConfig</span> <span class="o">{</span>
@@ -207,7 +210,7 @@
 </div>
 </div>
 <div class="section" id="outofmemory">
-<span id="outofmemory"></span><h2>4.OutOfMemory问题<a class="headerlink" href="#outofmemory" title="Permalink to this headline">¶</a></h2>
+<h2>4.OutOfMemory问题<a class="headerlink" href="#outofmemory" title="Permalink to this headline">¶</a></h2>
 <p>运行工程，出现OutOfMemory的问题时，在gradle.build中添加以下配置偿试解决。</p>
 <div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">android</span> <span class="o">{</span>
     <span class="n">defaultConfig</span> <span class="o">{</span>
@@ -220,8 +223,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id2"></span><h2>5. 混淆修改<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h2>5. 混淆修改<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>Android Studio中出现<code class="docutils literal notranslate"><span class="pre">Build-in</span> <span class="pre">class</span> <span class="pre">shrinker</span> <span class="pre">and</span> <span class="pre">multidex</span> <span class="pre">are</span> <span class="pre">not</span> <span class="pre">supported</span> <span class="pre">yet</span></code>错误提示时，大多数情况是因为useProguard字段导致的。请将useProguard 改成minifyEnabled试试。</p>
 <div class="highlight-groovy notranslate"><div class="highlight"><pre><span></span><span class="n">android</span> <span class="o">{</span>
     <span class="n">buildTypes</span> <span class="o">{</span>
@@ -257,7 +260,7 @@
         <a href="unity06_3_multidex_dexbyunity.html" class="btn btn-neutral float-right" title="使用Unity 解决65535问题" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="unity06_1_multidex_guide.html" class="btn btn-neutral" title="65535方法数超量问题" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="unity06_1_multidex_guide.html" class="btn btn-neutral float-left" title="65535方法数超量问题" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -283,27 +286,16 @@
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="动态Icon广告" href="ios09_icon.html" />
     <link rel="prev" title="插屏广告" href="ios05_inter.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -163,10 +166,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="">
-<span id="id1"></span><h1>激励视频<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="">
-<span id="id2"></span><h2>激励视频接入<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="id1">
+<h1>激励视频<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>激励视频接入<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>有关激励视频的接口方法与协议都定义在UPRewardWrapper.h文件中。</p>
 <p>在XCode工程中引用UPRewardWrapper.h头文件方式：</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#import   &lt;UPSDK/UPSDK.h&gt;</span>
@@ -240,10 +243,9 @@
 <span class="k">@end</span>
 </pre></div>
 </div>
-<p><br></p>
-</div>
-<div class="section" id="">
-<span id="id3"></span><h2>示例代码<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<br></div>
+<div class="section" id="id3">
+<h2>示例代码<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>定义一个<em>STRewardViewController</em>类，用于测试激励视频的显示。</p>
 <blockquote>
 <div>我们仅以XCode工程作为示例，其它IDE工程，请参考修改！</div></blockquote>
@@ -329,10 +331,9 @@
 <blockquote>
 <div>视频显示后，可以通过观察以上的打印，测试相关的事件行为是否正确发生。</div></blockquote>
 <p><font color=#DC143C>注意：在收到<code class="docutils literal notranslate"><span class="pre">UPRewardVideoAdDidRewardUserWithReward:</span></code>方法回调之后，才能给用户发放奖励</font></p>
-<p><br></p>
-</div>
-<div class="section" id="">
-<span id="id4"></span><h2>加载回调<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<br></div>
+<div class="section" id="id4">
+<h2>加载回调<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>推荐使用<code class="docutils literal notranslate"><span class="pre">[[UPRewardWrapper</span> <span class="pre">shareInstance]</span> <span class="pre">isReady]</span></code>来判断广告是否加载成功。</p>
 <p>但如果明确需要广告加载结果回调，我们提供以下方式获取加载回调</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>// 在对应类中声明UPRewardLoadDelegate协议，并调用加载方法
@@ -363,7 +364,7 @@
         <a href="ios09_icon.html" class="btn btn-neutral float-right" title="动态Icon广告" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ios05_inter.html" class="btn btn-neutral" title="插屏广告" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ios05_inter.html" class="btn btn-neutral float-left" title="插屏广告" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -389,27 +390,16 @@
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="回调接口" href="unity04_2_callback.html" />
     <link rel="prev" title="UnityPlugin API介绍" href="unity04_api_catalog.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -167,15 +170,15 @@
            <div itemprop="articleBody">
             
   <div class="section" id="api">
-<span id="api"></span><h1>API说明<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
+<h1>API说明<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="upsdk-unity-plugin">
-<span id="upsdk-unity-plugin"></span><h2>UPSDK Unity Plugin类引用<a class="headerlink" href="#upsdk-unity-plugin" title="Permalink to this headline">¶</a></h2>
+<h2>UPSDK Unity Plugin类引用<a class="headerlink" href="#upsdk-unity-plugin" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">Polymer.PolyADSDK</span> <span class="p">;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="upsdk-api">
-<span id="upsdk-api"></span><h2>UPSDK API<a class="headerlink" href="#upsdk-api" title="Permalink to this headline">¶</a></h2>
+<h2>UPSDK API<a class="headerlink" href="#upsdk-api" title="Permalink to this headline">¶</a></h2>
 <p>版本3003，我们修改了Unity Plugin的访问类为<code class="docutils literal notranslate"><span class="pre">UPSDK.cs</span></code>，但依然兼容了<code class="docutils literal notranslate"><span class="pre">PolyADSDK.cs</span></code>所有的方法与回调接口。
 因此对于3003及更高的版本，建议使用UPSDK类调用Unity Plugin的所有API与回调接口。</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
@@ -398,18 +401,18 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id1"></span><h2>需要特殊说明的方法<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="">
-<span id="id2"></span><h3>1. 仅支持条型横幅广告<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h2>需要特殊说明的方法<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>1. 仅支持条型横幅广告<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>在插件模式下，<strong>仅支持条型横幅广告</strong>，而且显示位置固定在当前窗口的<strong>顶部或底部</strong>！</p>
 </div>
 <div class="section" id="setmanifestpackagename-string-packagename">
-<span id="setmanifestpackagename-string-packagename"></span><h3>2. <strong>setManifestPackageName</strong>(string packagename)<a class="headerlink" href="#setmanifestpackagename-string-packagename" title="Permalink to this headline">¶</a></h3>
+<h3>2. <strong>setManifestPackageName</strong>(string packagename)<a class="headerlink" href="#setmanifestpackagename-string-packagename" title="Permalink to this headline">¶</a></h3>
 <p>此API仅适用于Android，对于2031以下的版本非常重要。当AndroidManifest中,Application所设置的package name与实际打包的名字不一样时，请务必通过此API向SDK设置<strong>AndroidManifest</strong>所对应的<strong>package name</strong>!!!</p>
 </div>
-<div class="section" id="">
-<span id="id3"></span><h3>3. 退出广告<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h3>3. 退出广告<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>当用户即将退出当前游戏时，调用<strong>onBackPressed()</strong>，可以显示一个广告页面。</p>
 </div>
 </div>
@@ -426,7 +429,7 @@
         <a href="unity04_2_callback.html" class="btn btn-neutral float-right" title="回调接口" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="unity04_api_catalog.html" class="btn btn-neutral" title="UnityPlugin API介绍" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="unity04_api_catalog.html" class="btn btn-neutral float-left" title="UnityPlugin API介绍" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -452,27 +455,16 @@
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

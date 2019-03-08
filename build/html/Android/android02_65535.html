@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="SDK初始化" href="android03_init.html" />
     <link rel="prev" title="接入问题解决" href="android01_3_help_faq.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -163,18 +166,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="">
-<span id="id1"></span><h1>解决65535方法数过多<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="id1">
+<h1>解决65535方法数过多<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <p>如果您由于集成的 SDK 过多在构建过程中导致出现</p>
 <p>Conversion to Dalvik format failed: Unable to execute dex: method ID not in [0, 0xffff]: 65536</p>
 <p>问题时，我们提供如下方案为您解决此问题。</p>
 <p>Unity工程请参考<a class="reference external" href="../Unity/unity06_multidex_catalog.html">Unity MultiDex方案</a>。</p>
-<div class="section" id="">
-<span id="id2"></span><h2>一、开启混淆<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h2>一、开启混淆<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>如果您的应用未开启混淆，我们建议您开启混淆功能，配置ProGuard后能有效排除一些未使用的类和方法，关于广告SDK的混淆配置请参考下载的资源中的<code class="docutils literal notranslate"><span class="pre">proguard-project.txt</span></code>文件，如果开启混淆后仍然超出限制，请继续参考下面的方案。</p>
 </div>
 <div class="section" id="multidex">
-<span id="multidex"></span><h2>二、使用MultiDex方案<a class="headerlink" href="#multidex" title="Permalink to this headline">¶</a></h2>
+<h2>二、使用MultiDex方案<a class="headerlink" href="#multidex" title="Permalink to this headline">¶</a></h2>
 <p>MultiDex方案是Google官方为突破64K方法数限制而推出的解决方案，如果您使用Android Studio进行开发，那么此方案简单易用，按照以下顺序进行配置即可。</p>
 <p>首先将如下配置加入工程 build.gradle中：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">android</span> <span class="p">{</span>
@@ -202,8 +205,8 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public</span> <span class="k">class</span> <span class="nc">MyApplication</span> <span class="n">extends</span> <span class="n">FooApplication</span> <span class="p">{</span>  
     <span class="nd">@Override</span>  
     <span class="n">protected</span> <span class="n">void</span> <span class="n">attachBaseContext</span><span class="p">(</span><span class="n">Context</span> <span class="n">base</span><span class="p">)</span> <span class="p">{</span>  
-        <span class="nb">super</span><span class="o">.</span><span class="n">attachBaseContext</span><span class="p">(</span><span class="n">base</span><span class="p">);</span>
-        <span class="n">MultiDex</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="n">this</span><span class="p">);</span>  
+		<span class="nb">super</span><span class="o">.</span><span class="n">attachBaseContext</span><span class="p">(</span><span class="n">base</span><span class="p">);</span>
+		<span class="n">MultiDex</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="n">this</span><span class="p">);</span>  
     <span class="p">}</span>  
 <span class="p">}</span>  
 </pre></div>
@@ -211,7 +214,7 @@
 <p>这样就可以有效解决Android Studio开发的项目中出现的64K方法数限制问题。</p>
 </div>
 <div class="section" id="dex">
-<span id="dex"></span><h2>三、使用Dex动态加载方案<a class="headerlink" href="#dex" title="Permalink to this headline">¶</a></h2>
+<h2>三、使用Dex动态加载方案<a class="headerlink" href="#dex" title="Permalink to this headline">¶</a></h2>
 <p>如果您是使用Eclipse开发，接入MultiDex方案会比较复杂，因此我们提供了另外一种解决方案：Dex动态加载</p>
 <p>在下载的SDK压缩包中，您可以看到目录中包含有 <code class="docutils literal notranslate"><span class="pre">assets</span></code> 文件夹，然后将 <code class="docutils literal notranslate"><span class="pre">assets</span></code> 目录拷贝到项目中，如果您不需要接入其中的某个联盟，将 <code class="docutils literal notranslate"><span class="pre">assets/up_android</span></code> 文件夹中对应的 <code class="docutils literal notranslate"><span class="pre">dex_xxx.jar</span></code> 文件删除掉即可。</p>
 <p><strong>【注意】 在以上的复制文件的过程中请不要修改任意文件或者文件夹的命名</strong></p>
@@ -230,7 +233,7 @@
         <a href="android03_init.html" class="btn btn-neutral float-right" title="SDK初始化" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="android01_3_help_faq.html" class="btn btn-neutral" title="接入问题解决" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="android01_3_help_faq.html" class="btn btn-neutral float-left" title="接入问题解决" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -256,27 +259,16 @@
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

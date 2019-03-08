@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="解决65535方法数过多" href="android02_65535.html" />
     <link rel="prev" title="Eclipse 接入帮助" href="android01_2_help_es.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -170,12 +173,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="">
-<span id="id1"></span><h1>接入问题解决<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="id1">
+<h1>接入问题解决<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="android-studio-androidmanfiest-xml">
-<span id="android-studio-androidmanfiest-xml"></span><h2>一、Android Studio AndroidManfiest.xml 声明冲突<a class="headerlink" href="#android-studio-androidmanfiest-xml" title="Permalink to this headline">¶</a></h2>
+<h2>一、Android Studio AndroidManfiest.xml 声明冲突<a class="headerlink" href="#android-studio-androidmanfiest-xml" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="com-google-android-gms-version">
-<span id="com-google-android-gms-version"></span><h3>1. com.google.android.gms.version 冲突或缺失报错<a class="headerlink" href="#com-google-android-gms-version" title="Permalink to this headline">¶</a></h3>
+<h3>1. com.google.android.gms.version 冲突或缺失报错<a class="headerlink" href="#com-google-android-gms-version" title="Permalink to this headline">¶</a></h3>
 <p>在<strong>Android Studio</strong>版本中，UPSDK为了避免此类冲突，从2.0.21的Studio版本开始，在AndroidManfiest.xml 中已经去掉了如下声明:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;!-- admob --&gt;
 &lt;meta-data
@@ -195,15 +198,15 @@
 <p><em>version_ad.xml</em>内容：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 &lt;resources&gt;
-    // 定义gms version的值，integer类型
-    // 如果当前版本不是9080000，请换成正确的版本值
-    &lt;integer name=&quot;google_play_services_version&quot;&gt;11020000&lt;/integer&gt;
+	// 定义gms version的值，integer类型
+	// 如果当前版本不是9080000，请换成正确的版本值
+	&lt;integer name=&quot;google_play_services_version&quot;&gt;11020000&lt;/integer&gt;
 &lt;/resources&gt;
 </pre></div>
 </div>
 </div>
 <div class="section" id="activity">
-<span id="activity"></span><h3>2. activity 冲突或缺失报错<a class="headerlink" href="#activity" title="Permalink to this headline">¶</a></h3>
+<h3>2. activity 冲突或缺失报错<a class="headerlink" href="#activity" title="Permalink to this headline">¶</a></h3>
 <p>在Android Studio的版本中，UPSDK从2.0.21的Studio版本开始，在AndroidManfiest.xml中去掉了对Admob以及Facebook广告所需要依赖的Activity组件声明。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;!-- admob --&gt;
 
@@ -227,9 +230,9 @@
 </div>
 </div>
 <div class="section" id="admob-gms">
-<span id="admob-gms"></span><h2>二、Admob gms 冲突<a class="headerlink" href="#admob-gms" title="Permalink to this headline">¶</a></h2>
+<h2>二、Admob gms 冲突<a class="headerlink" href="#admob-gms" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="facebook-adsadmob-ad">
-<span id="facebook-adsadmob-ad"></span><h3>1. Facebook Ads依赖Admob Ad导致冲突<a class="headerlink" href="#facebook-adsadmob-ad" title="Permalink to this headline">¶</a></h3>
+<h3>1. Facebook Ads依赖Admob Ad导致冲突<a class="headerlink" href="#facebook-adsadmob-ad" title="Permalink to this headline">¶</a></h3>
 <p>Facebook Ads通过compile方式在线更新audience-network-sdk时，除了下载audience-network-sdk所对应的aar文件外，还会下载如下两个google gms库文件：</p>
 <ul class="simple">
 <li>play-services-ads-8.4.0</li>
@@ -243,8 +246,8 @@
 <li>google gms service在线更新下载，facebook audience-network-sdk从本地导入(aar或jar包都可以)</li>
 </ol>
 </div>
-<div class="section" id="">
-<span id="id2"></span><h3>2.其它情况引起的冲突<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h3>2.其它情况引起的冲突<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>由于Admob广告，需要gms play service的支持，对于期望支持Admob广告的工程来说，必须正确添加gms相关的依赖库以及配置。</p>
 <p>UPSDK对于Admob的支持，需要依赖gms player service如下几个方面的库：</p>
 <ul class="simple">
@@ -259,7 +262,7 @@
 </div>
 </div>
 <div class="section" id="xxx-so">
-<span id="xxx-so"></span><h2>三、xxx.so缺失的问题<a class="headerlink" href="#xxx-so" title="Permalink to this headline">¶</a></h2>
+<h2>三、xxx.so缺失的问题<a class="headerlink" href="#xxx-so" title="Permalink to this headline">¶</a></h2>
 <p>UPAdsSDK_x.x.x.aar以及adcolony_ads.aar中，提供了如下三种cpu类型的so文件：</p>
 <ul class="simple">
 <li>armeabi</li>
@@ -269,14 +272,14 @@
 <p>如果你的工程（如cococs引擎开发的游戏一般仅支持armeabi）支持的cpu类型少于、多于或不同于以上三类，程序运行时都会出现类似于以下的错误。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">java</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">UnsatisfiedLinkError</span><span class="p">:</span>
 <span class="n">Couldn</span><span class="s1">&#39;t load cocos2dlua from loader dalvik.system.PathClassLoader</span>
-    <span class="p">[</span><span class="n">DexPathList</span><span class="p">[[</span><span class="nb">zip</span> <span class="n">file</span> <span class="s2">&quot;/data/app/org.cocos2dx.xxxxx-1.apk&quot;</span><span class="p">],</span>
-    <span class="n">nativeLibraryDirectories</span><span class="o">=</span><span class="p">[</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">app</span><span class="o">-</span><span class="n">lib</span><span class="o">/</span><span class="n">org</span><span class="o">.</span><span class="n">cocos2dx</span><span class="o">.</span><span class="n">xxxxx</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> 
-    <span class="o">/</span><span class="n">vendor</span><span class="o">/</span><span class="n">lib</span><span class="p">,</span> <span class="o">/</span><span class="n">system</span><span class="o">/</span><span class="n">lib</span><span class="p">,</span> <span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">datalib</span><span class="p">]]]:</span> <span class="n">findLibrary</span> <span class="n">returned</span> <span class="n">null</span>
-              <span class="n">at</span> <span class="n">java</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">Runtime</span><span class="o">.</span><span class="n">loadLibrary</span><span class="p">(</span><span class="n">Runtime</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">358</span><span class="p">)</span>
-              <span class="n">at</span> <span class="n">java</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">System</span><span class="o">.</span><span class="n">loadLibrary</span><span class="p">(</span><span class="n">System</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">555</span><span class="p">)</span>
-              <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">cocos2dx</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">Cocos2dxActivity</span><span class="o">.</span><span class="n">onLoadNativeLibraries</span><span class="p">(</span><span class="n">Cocos2dxActivity</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">248</span><span class="p">)</span>
-              <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">cocos2dx</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">Cocos2dxActivity</span><span class="o">.</span><span class="n">onCreate</span><span class="p">(</span><span class="n">Cocos2dxActivity</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">264</span><span class="p">)</span>
-              <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">cocos2dx</span><span class="o">.</span><span class="n">lua</span><span class="o">.</span><span class="n">AppActivity</span><span class="o">.</span><span class="n">onCreate</span><span class="p">(</span><span class="n">AppActivity</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">57</span><span class="p">)</span>
+	<span class="p">[</span><span class="n">DexPathList</span><span class="p">[[</span><span class="nb">zip</span> <span class="n">file</span> <span class="s2">&quot;/data/app/org.cocos2dx.xxxxx-1.apk&quot;</span><span class="p">],</span>
+	<span class="n">nativeLibraryDirectories</span><span class="o">=</span><span class="p">[</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">app</span><span class="o">-</span><span class="n">lib</span><span class="o">/</span><span class="n">org</span><span class="o">.</span><span class="n">cocos2dx</span><span class="o">.</span><span class="n">xxxxx</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> 
+	<span class="o">/</span><span class="n">vendor</span><span class="o">/</span><span class="n">lib</span><span class="p">,</span> <span class="o">/</span><span class="n">system</span><span class="o">/</span><span class="n">lib</span><span class="p">,</span> <span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">datalib</span><span class="p">]]]:</span> <span class="n">findLibrary</span> <span class="n">returned</span> <span class="n">null</span>
+			  <span class="n">at</span> <span class="n">java</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">Runtime</span><span class="o">.</span><span class="n">loadLibrary</span><span class="p">(</span><span class="n">Runtime</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">358</span><span class="p">)</span>
+			  <span class="n">at</span> <span class="n">java</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">System</span><span class="o">.</span><span class="n">loadLibrary</span><span class="p">(</span><span class="n">System</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">555</span><span class="p">)</span>
+			  <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">cocos2dx</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">Cocos2dxActivity</span><span class="o">.</span><span class="n">onLoadNativeLibraries</span><span class="p">(</span><span class="n">Cocos2dxActivity</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">248</span><span class="p">)</span>
+			  <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">cocos2dx</span><span class="o">.</span><span class="n">lib</span><span class="o">.</span><span class="n">Cocos2dxActivity</span><span class="o">.</span><span class="n">onCreate</span><span class="p">(</span><span class="n">Cocos2dxActivity</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">264</span><span class="p">)</span>
+			  <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">cocos2dx</span><span class="o">.</span><span class="n">lua</span><span class="o">.</span><span class="n">AppActivity</span><span class="o">.</span><span class="n">onCreate</span><span class="p">(</span><span class="n">AppActivity</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">57</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>原因是当前应用不同CPU架构所需要的so文件<strong>未对齐</strong>。</p>
@@ -284,7 +287,7 @@
 1.对于gradle工程，直接在app目录下的gradle.build文件中添加对实际架构的支持：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">defaultConfig</span> <span class="p">{</span>
     <span class="n">ndk</span> <span class="p">{</span>
-        <span class="o">//</span> <span class="n">假设应用支持如下四种CPU</span>
+		<span class="o">//</span> <span class="n">假设应用支持如下四种CPU</span>
         <span class="n">abiFilters</span> <span class="s1">&#39;armeabi&#39;</span> <span class="p">,</span><span class="s1">&#39;armeabi-v7a&#39;</span><span class="p">,</span> <span class="s1">&#39;x86&#39;</span><span class="p">,</span> <span class="s1">&#39;arm64-v8a&#39;</span>
     <span class="p">}</span>
 
@@ -309,7 +312,7 @@
         <a href="android02_65535.html" class="btn btn-neutral float-right" title="解决65535方法数过多" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="android01_2_help_es.html" class="btn btn-neutral" title="Eclipse 接入帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="android01_2_help_es.html" class="btn btn-neutral float-left" title="Eclipse 接入帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -335,27 +338,16 @@
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

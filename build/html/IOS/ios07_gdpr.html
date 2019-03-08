@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Demo 下载" href="ios08_demo.html" />
     <link rel="prev" title="动态Icon广告" href="ios09_icon.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -164,13 +167,13 @@
            <div itemprop="articleBody">
             
   <div class="section" id="gdpr">
-<span id="gdpr"></span><h1>GDPR<a class="headerlink" href="#gdpr" title="Permalink to this headline">¶</a></h1>
+<h1>GDPR<a class="headerlink" href="#gdpr" title="Permalink to this headline">¶</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">GDPR《一般数据保护法案》</span></code>是欧盟出台的数据保护方案，如果您的产品会面向欧盟用户，我们提供如下方案确保<code class="docutils literal notranslate"><span class="pre">UPSDK</span></code>遵守<code class="docutils literal notranslate"><span class="pre">GDPR</span></code>规范。</p>
 <p><code class="docutils literal notranslate"><span class="pre">UPSDK</span></code>在<code class="docutils literal notranslate"><span class="pre">3.0.03</span></code>版本支持欧盟<code class="docutils literal notranslate"><span class="pre">GDPR</span></code>规范，发行区域包含欧盟或涵盖欧盟用户的开发者必须处理此逻辑。</p>
-<div class="section" id="gdpr">
-<span id="id1"></span><h2>GDPR 推荐用例<a class="headerlink" href="#gdpr" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="">
-<span id="id2"></span><h3>方案一<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h2>GDPR 推荐用例<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h3>方案一<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>推荐根据自己游戏的画面风格自定义GDPR的授权弹框界面，保证产品体验最佳。
 采用此方案时，仅需要将授权结果同步给UPSDK后再初始化UPSDK。</p>
 <p>示例代码：</p>
@@ -221,8 +224,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id3"></span><h3>方案二<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h3>方案二<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>如果采用UPSDK提供的标准授权处理机制，请参考以下代码修改UPSDK的初始化流程。</p>
 <p>示例代码：</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -263,9 +266,9 @@
 </div>
 </div>
 <div class="section" id="gdpr-api">
-<span id="gdpr-api"></span><h2>GDPR API介绍<a class="headerlink" href="#gdpr-api" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="gdpr">
-<span id="id4"></span><h3>一、开发者可以自行获取GDPR状态的<a class="headerlink" href="#gdpr" title="Permalink to this headline">¶</a></h3>
+<h2>GDPR API介绍<a class="headerlink" href="#gdpr-api" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h3>一、开发者可以自行获取GDPR状态的<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <p>针对可以自行获取GDPR状态的的开发者，UPSDK提供了设置GDPR状态的API<code class="docutils literal notranslate"><span class="pre">(此API需要在SDK初始化之前调用)</span></code>，即</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span> <span class="cm">/**</span>
 <span class="cm"> 更新访问用户隐私信息状态</span>
@@ -294,8 +297,8 @@
 </div>
 </div>
 <hr class="docutils" />
-<div class="section" id="">
-<span id="id5"></span><h3>二、开发者无法自行判断用户是否为欧盟用户的<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id5">
+<h3>二、开发者无法自行判断用户是否为欧盟用户的<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
 <p>针对此种情况，UPSDK提供了异步查询当前用户是否为欧盟用户的API，即</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> 查询用户是否是欧盟用户</span>
@@ -319,8 +322,8 @@
 </div>
 </div>
 <hr class="docutils" />
-<div class="section" id="">
-<span id="id6"></span><h3>三、开发者无法自行向用户请求授权使用隐私信息的<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id6">
+<h3>三、开发者无法自行向用户请求授权使用隐私信息的<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <p>针对此种情况，UPSDK提供了使用Alter向用户请求授权使用隐私信息的API，即</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> 使用弹窗向用户请求访问隐私信息授权</span>
@@ -345,8 +348,8 @@
 </div>
 </div>
 <hr class="docutils" />
-<div class="section" id="gdpr">
-<span id="id7"></span><h3>四、开发者想获知当前GDPR授权状态的<a class="headerlink" href="#gdpr" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id7">
+<h3>四、开发者想获知当前GDPR授权状态的<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <p>针对此种情况，UPSDK提供了获取当前GDPR授权状态的API，即</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
 <span class="cm"> 获取当前访问用户隐私信息状态</span>
@@ -359,8 +362,8 @@
 <p>其中若返回值为<code class="docutils literal notranslate"><span class="pre">UPAccessPrivacyInfoStatusAccepted</span></code>表示用户同意，<code class="docutils literal notranslate"><span class="pre">UPAccessPrivacyInfoStatusDenied</span></code>表示用户拒绝，<code class="docutils literal notranslate"><span class="pre">UPAccessPrivacyInfoStatusNone</span></code>表示未知或尚未向用户请求授权</p>
 </div>
 <hr class="docutils" />
-<div class="section" id="">
-<span id="id8"></span><h3>五、整体逻辑示例<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id8">
+<h3>五、整体逻辑示例<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="c1">// 第一步 准备查询用户归属</span>
 <span class="p">[</span><span class="n">UPSDK</span> <span class="nl">checkIsEuropeanUnionUser</span><span class="p">:</span><span class="o">^</span><span class="p">(</span><span class="kt">BOOL</span> <span class="n">isEuropeanUnion</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">isEuropeanUnion</span><span class="p">)</span> <span class="p">{</span>
@@ -405,7 +408,7 @@
         <a href="ios08_demo.html" class="btn btn-neutral float-right" title="Demo 下载" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ios09_icon.html" class="btn btn-neutral" title="动态Icon广告" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ios09_icon.html" class="btn btn-neutral float-left" title="动态Icon广告" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -431,27 +434,16 @@
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

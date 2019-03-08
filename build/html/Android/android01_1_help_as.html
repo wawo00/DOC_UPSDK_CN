@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Eclipse 接入帮助" href="android01_2_help_es.html" />
     <link rel="prev" title="接入帮助" href="android01_help_catalog.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -171,32 +174,32 @@
            <div itemprop="articleBody">
             
   <div class="section" id="android-studio">
-<span id="android-studio"></span><h1>Android Studio 接入帮助<a class="headerlink" href="#android-studio" title="Permalink to this headline">¶</a></h1>
+<h1>Android Studio 接入帮助<a class="headerlink" href="#android-studio" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="upsdk">
-<span id="upsdk"></span><h2>一、UPSDK的目录结构<a class="headerlink" href="#upsdk" title="Permalink to this headline">¶</a></h2>
+<h2>一、UPSDK的目录结构<a class="headerlink" href="#upsdk" title="Permalink to this headline">¶</a></h2>
 <p>针对Android Studio 或 Gradle 构建的工程，UPSDK提倡以<code class="docutils literal notranslate"><span class="pre">*.aar</span></code>的方式被其它主工程导入。UPSDK Studio版本的下载包解压后的目录结构如下：</p>
-<p><img alt="" src="http://docc.upltv.com/uploads/201805/5af5689a90a1a_5af5689a.png" /></p>
-<div class="section" id="upsdk">
-<span id="id1"></span><h3>1. UPSDK 主包<a class="headerlink" href="#upsdk" title="Permalink to this headline">¶</a></h3>
+<p><img alt="http://docc.upltv.com/uploads/201805/5af5689a90a1a_5af5689a.png" src="http://docc.upltv.com/uploads/201805/5af5689a90a1a_5af5689a.png" /></p>
+<div class="section" id="id1">
+<h3>1. UPSDK 主包<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>如上图所示，命名为<code class="docutils literal notranslate"><span class="pre">UPAdsSdk_x.x.xx.aar</span></code>的文件即为UPSDK 主包，必须添加到你的主工程中。</p>
 </div>
-<div class="section" id="upsdk">
-<span id="id2"></span><h3>2. UPSDK 联盟依赖库<a class="headerlink" href="#upsdk" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h3>2. UPSDK 联盟依赖库<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>UPSDK与其它联盟广告商是一种松散耦合在的关系，可以根据实际需要在主工程中剔除某些不支持广告依赖库，从而减少应用程序的包体大小。</p>
 <p>这些联盟商的依赖库除了Admob与Facebook广告依赖库，其它的目前都是xxxx_ads.aar的文件形式存在。</p>
 </div>
 <div class="section" id="admobfacebook">
-<span id="admobfacebook"></span><h3>3. Admob与Facebook的广告依赖库<a class="headerlink" href="#admobfacebook" title="Permalink to this headline">¶</a></h3>
+<h3>3. Admob与Facebook的广告依赖库<a class="headerlink" href="#admobfacebook" title="Permalink to this headline">¶</a></h3>
 <p>UPSDK的本地文件中，提供了Admob与Facebook 两种广告平台的aar依赖库，以备在网络不佳或其它原因时直接从本地libs中加载提供便利。即使如此，我们仍然提倡尽量在gradle中在线从两者的远程仓库更新下载合适的依赖库。</p>
 <blockquote>
 <div>有关Admob与Facebook 两种广告平台的接入说明，在本节的后续内容中有详解解说。</div></blockquote>
 </div>
 </div>
 <div class="section" id="android-studio-gradle-upsdk">
-<span id="android-studio-gradle-upsdk"></span><h2>二、使用 Android Studio 的 Gradle 导入UPSDK主包<a class="headerlink" href="#android-studio-gradle-upsdk" title="Permalink to this headline">¶</a></h2>
+<h2>二、使用 Android Studio 的 Gradle 导入UPSDK主包<a class="headerlink" href="#android-studio-gradle-upsdk" title="Permalink to this headline">¶</a></h2>
 <p>根据上文的介绍，在你下载好的文件目录中找到名为 <code class="docutils literal notranslate"><span class="pre">UPAdsSdk_x.x.xx.aar</span></code>的文件，并添加到项目的<code class="docutils literal notranslate"><span class="pre">libs</span></code>目录下。
 添加后，Studio工程的效果图如下所示：</p>
-<p><img alt="" src="http://docc.upltv.com/uploads/201805/5af56922f4043_5af56922.png" /></p>
+<p><img alt="http://docc.upltv.com/uploads/201805/5af56922f4043_5af56922.png" src="http://docc.upltv.com/uploads/201805/5af56922f4043_5af56922.png" /></p>
 <blockquote>
 <div><code class="docutils literal notranslate"><span class="pre">UPAdsSdk_3.0.03.aar</span></code>仅作为示例参考说明</div></blockquote>
 <p>为了确保libs目录的aar包能正确被工程引用，请检查<code class="docutils literal notranslate"><span class="pre">app</span></code>目录下的<code class="docutils literal notranslate"><span class="pre">build.gradle</span></code>文件中，是否添加以下配置参数：</p>
@@ -220,21 +223,21 @@
 <div>作为优秀而强大的聚合平台，UPSDK必须灵活兼容第三方广告联盟商的运行库，才能取百家之长发挥最大的广告效益。因此，正确添加第三方依赖库，才能发挥UPSDK的最大潜能。</div></blockquote>
 <p>如果您使用 Android Studio 或 Gradle 构建 Android 项目，那么首先需要将目录中的 <code class="docutils literal notranslate"><span class="pre">UPAdsSdk_x.x.xx.aar</span></code> 文件导入到您的项目中，目录中的 <code class="docutils literal notranslate"><span class="pre">xxx_ads.aar</span></code> 文件为使用各个广告联盟需要依赖的文件，您可以将其全部导入到项目中，如果有特殊原因导致您不希望导入某个平台的文件，您也可以只选择需要的广告联盟的文件进行导入。</p>
 </div>
-<div class="section" id="">
-<span id="id3"></span><h2>三、添加广告联盟的依赖库<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h2>三、添加广告联盟的依赖库<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>部分广告商的 SDK 运行依赖一些公共的第三方库，使用 Android Studio 构建的项目可以通过下述方式来将所依赖的第三方库导入你的项目。</p>
 <p><strong>原则上，我们建议将依赖的第三方库全部导入你的项目，但在某些确定条件下可以有选则性地添加某些广告联盟库以减少工程大小。但无论如何确保你所添加的联盟库完全满足当前广告业务运行时所依赖的外部条件，否则会因为缺少某些必要的支持而导致崩溃.</strong></p>
 <p>如果你想去除某联盟商的支持，但又不清楚如何操作，请优先与我们的技术支持人员沟通，在他们的协助下你将会正确而顺利达成目的。</p>
 <div class="section" id="aar">
-<span id="aar"></span><h3>1.添加联盟商的*.aar<a class="headerlink" href="#aar" title="Permalink to this headline">¶</a></h3>
+<h3>1.添加联盟商的*.aar<a class="headerlink" href="#aar" title="Permalink to this headline">¶</a></h3>
 <p>在你下载的目标文件中，命名为 <code class="docutils literal notranslate"><span class="pre">xxx_ads.aar</span></code> 的文件为使用各个广告联盟需要依赖的文件。请参考<strong>导入UPSDK aar文件</strong>的方式将其添加到你的工程中。</p>
 </div>
-<div class="section" id="">
-<span id="id4"></span><h3>2. 添加其它外部依赖<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id4">
+<h3>2. 添加其它外部依赖<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <p>由于一些联盟商运行时，需要其它额外的Android Api支持，因此还必须添加如下外部依赖库。</p>
 </div>
 <div class="section" id="gradlejcenter">
-<span id="gradlejcenter"></span><h3>1. 在Gradle中配置jcenter节点<a class="headerlink" href="#gradlejcenter" title="Permalink to this headline">¶</a></h3>
+<h3>1. 在Gradle中配置jcenter节点<a class="headerlink" href="#gradlejcenter" title="Permalink to this headline">¶</a></h3>
 <p>首先在你项目的主工程 <code class="docutils literal notranslate"><span class="pre">build.gradle</span></code> 文件中 <code class="docutils literal notranslate"><span class="pre">repositories</span></code> 节点加入 <code class="docutils literal notranslate"><span class="pre">jcenter</span></code></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">buildscript</span> <span class="p">{</span>
     <span class="n">repositories</span> <span class="p">{</span>
@@ -265,7 +268,7 @@
 </div>
 </div>
 <div class="section" id="android-support">
-<span id="android-support"></span><h3>2. 加入 Android Support 支持库<a class="headerlink" href="#android-support" title="Permalink to this headline">¶</a></h3>
+<h3>2. 加入 Android Support 支持库<a class="headerlink" href="#android-support" title="Permalink to this headline">¶</a></h3>
 <p><strong>【注意】由于Facebook等广告依赖了recyclerview的库，Google Admob等广告依赖Android Support V4库，因此请务必将这些依赖库引入你的项目，否则会导致程序崩溃！</strong></p>
 <p>广告的正常展示需要 <code class="docutils literal notranslate"><span class="pre">support</span></code> 库的支持，请参考以下方式将其引入到您的项目中。</p>
 <p>可以通过以下的方式添加依赖</p>
@@ -306,7 +309,7 @@
 </div>
 </div>
 <div class="section" id="google-ads-sdk">
-<span id="google-ads-sdk"></span><h3>3. 加入Google Ads SDK<a class="headerlink" href="#google-ads-sdk" title="Permalink to this headline">¶</a></h3>
+<h3>3. 加入Google Ads SDK<a class="headerlink" href="#google-ads-sdk" title="Permalink to this headline">¶</a></h3>
 <p>如果您的项目中希望接入Admob的广告，我们需要您在的项目中加入 Google Ads 支持，可以按以下的方式添加依赖</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dependencies</span> <span class="p">{</span>
     <span class="nb">compile</span> <span class="s1">&#39;com.google.android.gms:play-services-ads:16.0.0&#39;</span>
@@ -319,11 +322,11 @@
 </div>
 </div>
 <div class="section" id="proguard">
-<span id="proguard"></span><h2>四、修改 Proguard<a class="headerlink" href="#proguard" title="Permalink to this headline">¶</a></h2>
+<h2>四、修改 Proguard<a class="headerlink" href="#proguard" title="Permalink to this headline">¶</a></h2>
 <p>如果你的项目使用了 <code class="docutils literal notranslate"><span class="pre">proguard</span></code>，你需要将 <code class="docutils literal notranslate"><span class="pre">proguard-project.txt</span></code> 文件中的内容复制粘贴到你项目使用的 <code class="docutils literal notranslate"><span class="pre">proguard</span></code> 配置文件中。</p>
 </div>
 <div class="section" id="demo">
-<span id="demo"></span><h2>五、Demo工程<a class="headerlink" href="#demo" title="Permalink to this headline">¶</a></h2>
+<h2>五、Demo工程<a class="headerlink" href="#demo" title="Permalink to this headline">¶</a></h2>
 <p>为帮助您更好的了解广告SDK的接入以及使用，我们在这里提供了一个简单的<a class="reference external" href="https://github.com/AvidlyGit/AdSdkDemo-Studio">Demo工程</a>。</p>
 </div>
 </div>
@@ -339,7 +342,7 @@
         <a href="android01_2_help_es.html" class="btn btn-neutral float-right" title="Eclipse 接入帮助" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="android01_help_catalog.html" class="btn btn-neutral" title="接入帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="android01_help_catalog.html" class="btn btn-neutral float-left" title="接入帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -365,27 +368,16 @@
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

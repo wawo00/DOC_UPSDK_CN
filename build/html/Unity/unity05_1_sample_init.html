@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Unity Plugin A/B Test接口调用" href="unity05_2_sample_abtest.html" />
     <link rel="prev" title="UnityPlugin 使用示例" href="unity05_sample_catalog.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -173,11 +176,11 @@
            <div itemprop="articleBody">
             
   <div class="section" id="unity-plugin">
-<span id="unity-plugin"></span><h1>Unity Plugin 初始化方法<a class="headerlink" href="#unity-plugin" title="Permalink to this headline">¶</a></h1>
+<h1>Unity Plugin 初始化方法<a class="headerlink" href="#unity-plugin" title="Permalink to this headline">¶</a></h1>
 <p>版本3003，增加了新的访问类<code class="docutils literal notranslate"><span class="pre">UPSDK.cs</span></code>，但依然兼容了<code class="docutils literal notranslate"><span class="pre">PolyADSDK.cs</span></code>所有的方法与回调接口。</p>
 <p>示例代码以新类接口作参考。</p>
-<div class="section" id="unity-plugin">
-<span id="id1"></span><h2>Unity Plugin 初始化<a class="headerlink" href="#unity-plugin" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h2>Unity Plugin 初始化<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>在插件中初始化SDK一样也非常简单，只需要调用如下API:</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
 <span class="cm"> * 初始化UPSDK</span>
@@ -198,7 +201,7 @@
 <div>为了避免出错，请将AndroidManifest.xml文件中，Application节点对应的packagename属性正确传递到setManifestPackageName()方法中。</div></blockquote>
 </div>
 <div class="section" id="setcustomerid">
-<span id="setcustomerid"></span><h2>setCustomerId()<a class="headerlink" href="#setcustomerid" title="Permalink to this headline">¶</a></h2>
+<h2>setCustomerId()<a class="headerlink" href="#setcustomerid" title="Permalink to this headline">¶</a></h2>
 <p>对于国内发行的产品，由于无法正常收集<code class="docutils literal notranslate"><span class="pre">GAID</span></code>，导致用户新增计算错误，从3003的版本开始增加<code class="docutils literal notranslate"><span class="pre">PolyADSDK.setCustomerIdForAndroid();</span></code>方法，其中参数取<strong>AndroidId</strong>的值。
 请在UPAdsSdk.initPolyAdSDK()之前调用此方法。</p>
 <p>至于如何获得androidId的值请参考下面示例代码</p>
@@ -213,8 +216,8 @@
     <span class="o">}</span>
 </pre></div>
 </div>
-<div class="section" id="">
-<span id="id2"></span><h3>示例代码<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h3>示例代码<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>在示例代码中，通过点击UI上的初始化按钮，调用onButton_init_Click()方法。即使多次点击初始化按钮，<strong>重复调用UPSDK.initPolyAdSDK()</strong>，但SDK的<strong>实际初化只会进行一次</strong>。</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span>public void 调用onButton_init_Click()
 {
@@ -237,10 +240,10 @@
         UPSDK.UPRewardDidGivenCallback = new System.Action&amp;ltstring, string&gt;(actionForSdkRewardDidGiven);
         UPSDK.UPRewardDidAbandonCallback = new System.Action&amp;ltstring, string&gt;(actionForSdkRewardDidAbandon);
 
-        UPSDK.UPIconDidLoadCallback = new System.Action&lt;string,string&gt; (actionForIconAdLoadSuccess); 
-        UPSDK.UPIconDidLoadFailCallback = new System.Action&lt;string,string&gt; (actionForIconAdLoadFail); 
-        UPSDK.UPIconDidShowCallback = new System.Action&lt;string,string&gt; (actionForIconAdDidShow); 
-        UPSDK.UPIconDidClickCallback = new System.Action&lt;string,string&gt; (actionForIconAdDidClick);
+		UPSDK.UPIconDidLoadCallback = new System.Action&lt;string,string&gt; (actionForIconAdLoadSuccess); 
+		UPSDK.UPIconDidLoadFailCallback = new System.Action&lt;string,string&gt; (actionForIconAdLoadFail); 
+		UPSDK.UPIconDidShowCallback = new System.Action&lt;string,string&gt; (actionForIconAdDidShow); 
+		UPSDK.UPIconDidClickCallback = new System.Action&lt;string,string&gt; (actionForIconAdDidClick);
 
         #if UNITY_ANDROID &amp;&amp; !UNITY_EDITOR
 
@@ -333,23 +336,23 @@
 <span class="p">}</span>
 
 <span class="k">private</span> <span class="k">void</span> <span class="nf">actionForIconAdLoadSuccess</span><span class="p">(</span><span class="kt">string</span> <span class="n">placeId</span><span class="p">,</span><span class="kt">string</span> <span class="n">msg</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span> <span class="p">(</span><span class="s">&quot;===&gt; actionForIconAdLoadSuccess Callback at:&quot;</span> <span class="p">+</span> <span class="n">placeId</span><span class="p">);</span>
-    <span class="n">showTextMessage</span> <span class="p">(</span><span class="s">&quot;IconAd加载成功回调 ===&gt;&quot;</span> <span class="p">+</span> <span class="n">placeId</span><span class="p">);</span>
+	<span class="n">Debug</span><span class="p">.</span><span class="n">Log</span> <span class="p">(</span><span class="s">&quot;===&gt; actionForIconAdLoadSuccess Callback at:&quot;</span> <span class="p">+</span> <span class="n">placeId</span><span class="p">);</span>
+	<span class="n">showTextMessage</span> <span class="p">(</span><span class="s">&quot;IconAd加载成功回调 ===&gt;&quot;</span> <span class="p">+</span> <span class="n">placeId</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="k">private</span> <span class="k">void</span> <span class="nf">actionForIconAdLoadFail</span><span class="p">(</span><span class="kt">string</span> <span class="n">placeId</span><span class="p">,</span><span class="kt">string</span> <span class="n">msg</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span> <span class="p">(</span><span class="s">&quot;===&gt; actionForIconAdLoadFail Callback at:&quot;</span> <span class="p">+</span> <span class="n">placeId</span><span class="p">);</span>
-    <span class="n">showTextMessage</span> <span class="p">(</span><span class="s">&quot;IconAd加载失败回调 ===&gt;&quot;</span> <span class="p">+</span> <span class="n">placeId</span><span class="p">);</span>
+	<span class="n">Debug</span><span class="p">.</span><span class="n">Log</span> <span class="p">(</span><span class="s">&quot;===&gt; actionForIconAdLoadFail Callback at:&quot;</span> <span class="p">+</span> <span class="n">placeId</span><span class="p">);</span>
+	<span class="n">showTextMessage</span> <span class="p">(</span><span class="s">&quot;IconAd加载失败回调 ===&gt;&quot;</span> <span class="p">+</span> <span class="n">placeId</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="k">private</span> <span class="k">void</span> <span class="nf">actionForIconAdDidShow</span><span class="p">(</span><span class="kt">string</span> <span class="n">placeId</span><span class="p">,</span><span class="kt">string</span> <span class="n">msg</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span> <span class="p">(</span><span class="s">&quot;===&gt; actionForIconAdDidShow Callback at:&quot;</span> <span class="p">+</span> <span class="n">placeId</span><span class="p">);</span>
-    <span class="n">showTextMessage</span> <span class="p">(</span><span class="s">&quot;展示IconAd ===&gt;&quot;</span> <span class="p">+</span> <span class="n">placeId</span><span class="p">);</span>
+	<span class="n">Debug</span><span class="p">.</span><span class="n">Log</span> <span class="p">(</span><span class="s">&quot;===&gt; actionForIconAdDidShow Callback at:&quot;</span> <span class="p">+</span> <span class="n">placeId</span><span class="p">);</span>
+	<span class="n">showTextMessage</span> <span class="p">(</span><span class="s">&quot;展示IconAd ===&gt;&quot;</span> <span class="p">+</span> <span class="n">placeId</span><span class="p">);</span>
 <span class="p">}</span>
 
 <span class="k">private</span> <span class="k">void</span> <span class="nf">actionForIconAdDidClick</span><span class="p">(</span><span class="kt">string</span> <span class="n">placeId</span><span class="p">,</span><span class="kt">string</span> <span class="n">msg</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">Debug</span><span class="p">.</span><span class="n">Log</span> <span class="p">(</span><span class="s">&quot;===&gt; actionForIconAdDidClick Callback at:&quot;</span> <span class="p">+</span> <span class="n">placeId</span><span class="p">);</span>
-    <span class="n">showTextMessage</span> <span class="p">(</span><span class="s">&quot;点击IconAd ===&gt;&quot;</span> <span class="p">+</span> <span class="n">placeId</span><span class="p">);</span>
+	<span class="n">Debug</span><span class="p">.</span><span class="n">Log</span> <span class="p">(</span><span class="s">&quot;===&gt; actionForIconAdDidClick Callback at:&quot;</span> <span class="p">+</span> <span class="n">placeId</span><span class="p">);</span>
+	<span class="n">showTextMessage</span> <span class="p">(</span><span class="s">&quot;点击IconAd ===&gt;&quot;</span> <span class="p">+</span> <span class="n">placeId</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -368,7 +371,7 @@
         <a href="unity05_2_sample_abtest.html" class="btn btn-neutral float-right" title="Unity Plugin A/B Test接口调用" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="unity05_sample_catalog.html" class="btn btn-neutral" title="UnityPlugin 使用示例" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="unity05_sample_catalog.html" class="btn btn-neutral float-left" title="UnityPlugin 使用示例" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -394,27 +397,16 @@
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

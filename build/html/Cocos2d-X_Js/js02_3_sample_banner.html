@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="插屏广告" href="js02_4_sample_inter.html" />
     <link rel="prev" title="Cocos2d -X JavaScript A/B Test接口调用" href="js02_2_sample_abtest.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -168,11 +171,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="">
-<span id="id1"></span><h1>横幅广告<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="id1">
+<h1>横幅广告<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
 <p>横幅广告分为顶部banner和底部banner，JavascriptPlugin进一步简化了横幅banner广告的实现，提供有展示，隐藏，移除以及事件回调等接口。</p>
 <div class="section" id="banner">
-<span id="banner"></span><h2>1. banner广告的回调<a class="headerlink" href="#banner" title="Permalink to this headline">¶</a></h2>
+<h2>1. banner广告的回调<a class="headerlink" href="#banner" title="Permalink to this headline">¶</a></h2>
 <p>banner广告需要根据广告位来设置banner广告的展示，点击以及移除等事件的回调接口。回调接口会被插件内部保存，因此不需要多次设置，回调接口会被保存只有调用upltv:removeBannerAdAt(cpPlaceId)才会被删除。</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// 参数cpPlaceId：banner广告位</span>
 <span class="c1">// 参数bannerCall：banner回调接口</span>
@@ -204,8 +207,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="banner">
-<span id="id2"></span><h2>2. 展示顶部banner广告<a class="headerlink" href="#banner" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h2>2. 展示顶部banner广告<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>根据广告位，将banner展示在屏幕的顶部。</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// 将某个广告位的banner广告展示在屏幕顶部</span>
 <span class="nx">showBannerAdAtTop</span> <span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">cpPlaceId</span><span class="p">)</span>
@@ -230,8 +233,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="banner">
-<span id="id3"></span><h2>3. 隐藏顶部banner广告<a class="headerlink" href="#banner" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h2>3. 隐藏顶部banner广告<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>隐藏当前屏幕顶端的banner广告。</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// 隐藏当前屏幕的顶部banner广告</span>
 <span class="nx">hideBannerAdAtTop</span> <span class="o">:</span> <span class="kd">function</span><span class="p">()</span>
@@ -247,8 +250,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="banner">
-<span id="id4"></span><h2>4. 展示底部banner广告<a class="headerlink" href="#banner" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>4. 展示底部banner广告<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>根据广告位，将banner展示在屏幕的顶部。</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// 将某个广告位的banner广告展示在屏幕底部</span>
 <span class="nx">showBannerAdAtBottom</span> <span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">cpPlaceId</span><span class="p">)</span>
@@ -264,8 +267,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="banner">
-<span id="id5"></span><h2>5. 隐藏底部banner广告<a class="headerlink" href="#banner" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h2>5. 隐藏底部banner广告<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <p>隐藏当前屏幕底部的banner广告。</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// 隐藏当前屏幕的底部广告</span>
 <span class="nx">hideBannerAdAtBottom</span> <span class="o">:</span> <span class="kd">function</span><span class="p">()</span>
@@ -281,8 +284,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="banner">
-<span id="id6"></span><h2>6. 移除banner广告<a class="headerlink" href="#banner" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h2>6. 移除banner广告<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <p>UPSDK支持移除某个广告位上的banner广告。</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// 移除某个广告位的banner广告</span>
 <span class="nx">removeBannerAdAt</span> <span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">cpPlaceId</span><span class="p">)</span>
@@ -312,7 +315,7 @@
         <a href="js02_4_sample_inter.html" class="btn btn-neutral float-right" title="插屏广告" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="js02_2_sample_abtest.html" class="btn btn-neutral" title="Cocos2d -X JavaScript A/B Test接口调用" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="js02_2_sample_abtest.html" class="btn btn-neutral float-left" title="Cocos2d -X JavaScript A/B Test接口调用" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -338,27 +341,16 @@
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="JavaScriptPlugin 使用实例" href="js02_sample_catalog.html" />
     <link rel="prev" title="IOS Xcode接入帮助" href="js01_3_help_ios.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -166,16 +169,16 @@
            <div itemprop="articleBody">
             
   <div class="section" id="ios-cocoscreator">
-<span id="ios-cocoscreator"></span><h1>IOS CocosCreator说明<a class="headerlink" href="#ios-cocoscreator" title="Permalink to this headline">¶</a></h1>
+<h1>IOS CocosCreator说明<a class="headerlink" href="#ios-cocoscreator" title="Permalink to this headline">¶</a></h1>
 <p>请注意，若使用CocosCreator1.7（或以上）的版本进行接入，需要在UpAdsBrigeJs.mm文件进行两处修改。</p>
 <div class="section" id="seapi-h">
-<span id="seapi-h"></span><h2>1、添加SeApi.h引用<a class="headerlink" href="#seapi-h" title="Permalink to this headline">¶</a></h2>
+<h2>1、添加SeApi.h引用<a class="headerlink" href="#seapi-h" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#### include &quot;cocos/scripting/js-bindings/jswrapper/SeApi.h&quot;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="scriptingcorese-scriptengine">
-<span id="scriptingcorese-scriptengine"></span><h2>2、ScriptingCore被se::ScriptEngine替代<a class="headerlink" href="#scriptingcorese-scriptengine" title="Permalink to this headline">¶</a></h2>
+<h2>2、ScriptingCore被se::ScriptEngine替代<a class="headerlink" href="#scriptingcorese-scriptengine" title="Permalink to this headline">¶</a></h2>
 <p>在<code class="docutils literal notranslate"><span class="pre">[UpAdsBrigeJs</span> <span class="pre">vokeMethod:arg1:arg2]</span></code>方法里，将<code class="docutils literal notranslate"><span class="pre">ScriptingCore::getInstance()-&gt;evalString(jsCallStr.c_str());</span></code> 替换为<code class="docutils literal notranslate"><span class="pre">se::ScriptEngine::getInstance()-&gt;evalString(jsCallStr.c_str());</span></code>。</p>
 <p>参考代码如下：</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="p">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">vokeMethod:</span><span class="p">(</span><span class="bp">NSString</span><span class="o">*</span><span class="p">)</span> <span class="nv">name</span> <span class="nf">arg1:</span><span class="p">(</span><span class="bp">NSString</span><span class="o">*</span><span class="p">)</span> <span class="nv">param1</span> <span class="nf">arg2:</span><span class="p">(</span><span class="bp">NSString</span><span class="o">*</span><span class="p">)</span><span class="nv">param2</span> <span class="p">{</span>
@@ -201,7 +204,7 @@
         <a href="js02_sample_catalog.html" class="btn btn-neutral float-right" title="JavaScriptPlugin 使用实例" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="js01_3_help_ios.html" class="btn btn-neutral" title="IOS Xcode接入帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="js01_3_help_ios.html" class="btn btn-neutral float-left" title="IOS Xcode接入帮助" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -227,27 +230,16 @@
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

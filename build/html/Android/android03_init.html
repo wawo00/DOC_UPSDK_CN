@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="横幅广告" href="android04_banner_catalog.html" />
     <link rel="prev" title="解决65535方法数过多" href="android02_65535.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -164,7 +167,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="sdk">
-<span id="sdk"></span><h1>SDK初始化<a class="headerlink" href="#sdk" title="Permalink to this headline">¶</a></h1>
+<h1>SDK初始化<a class="headerlink" href="#sdk" title="Permalink to this headline">¶</a></h1>
 <p>请在主Activity中尽早初始化广告SDK，并根据您游戏的发行区域分别传入对应的<code class="docutils literal notranslate"><span class="pre">UPAdsGlobalZone</span></code>参数。</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span>    <span class="n">UPAdsSdk</span><span class="o">.</span><span class="na">init</span><span class="o">(</span><span class="kd">final</span> <span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="kd">final</span> <span class="n">UPAdsGlobalZone</span> <span class="n">zone</span><span class="o">);</span>
 
@@ -176,7 +179,7 @@
 </pre></div>
 </div>
 <div class="section" id="setcustomerid">
-<span id="setcustomerid"></span><h2>setCustomerId()<a class="headerlink" href="#setcustomerid" title="Permalink to this headline">¶</a></h2>
+<h2>setCustomerId()<a class="headerlink" href="#setcustomerid" title="Permalink to this headline">¶</a></h2>
 <p>对于国内发行的产品，由于无法正常收集<code class="docutils literal notranslate"><span class="pre">GAID</span></code>，导致用户新增计算错误，从3003的版本开始增加<code class="docutils literal notranslate"><span class="pre">UPAdsSdk.setCustomerId(String</span> <span class="pre">customerId)</span></code>方法，customerId参数取<strong>AndroidId</strong>的值。
 请在UPAdsSdk.init()之前调用此方法。</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">setCustomerId</span><span class="o">(</span><span class="n">String</span> <span class="n">customerId</span><span class="o">)</span>
@@ -191,17 +194,21 @@
 </pre></div>
 </div>
 </div>
+<div class="section" id="id1">
+<h2>动态权限申请<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>对于国内发行的产品，请不要忘记申请需要的权限以免影响广告在android 6.0版本设备上的展示，详细实现方式可参考<a class="reference external" href="http://docs.upltv.com/zh/master/Android/android09_permission.html">动态权限申请</a>。</p>
+</div>
 <div class="section" id="upsdk">
-<span id="upsdk"></span><h2>UPSDK前后台控制<a class="headerlink" href="#upsdk" title="Permalink to this headline">¶</a></h2>
+<h2>UPSDK前后台控制<a class="headerlink" href="#upsdk" title="Permalink to this headline">¶</a></h2>
 <p>对于Android平台，我们强烈要求在当前游戏的前台后切换时，调用UPSDK以下两个接口，以便UPSDK内部做出正确的响应，避免不必要的出错。</p>
 <div class="section" id="api">
-<span id="api"></span><h3>游戏恢复到前台时调用API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h3>
+<h3>游戏恢复到前台时调用API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">UPAdsSdk</span><span class="o">.</span><span class="na">onApplicationResume</span><span class="o">();</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="api">
-<span id="id1"></span><h3>游戏恢复到后台时调用API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h3>游戏恢复到后台时调用API<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="n">UPAdsSdk</span><span class="o">.</span><span class="na">onApplicationPause</span><span class="o">();</span>
 </pre></div>
 </div>
@@ -223,7 +230,7 @@
 </div>
 </div>
 <div class="section" id="debug">
-<span id="debug"></span><h2>开启 debug<a class="headerlink" href="#debug" title="Permalink to this headline">¶</a></h2>
+<h2>开启 debug<a class="headerlink" href="#debug" title="Permalink to this headline">¶</a></h2>
 <p>为方便您的接入调试，您可以在开发期间通过以下方法开启调试log，并且需要在正式发布时将其关闭</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">UPAdsSdk</span><span class="o">.</span><span class="n">setDebuggable</span><span class="p">(</span><span class="n">true</span><span class="p">);</span>
 </pre></div>
@@ -242,7 +249,7 @@
         <a href="android04_banner_catalog.html" class="btn btn-neutral float-right" title="横幅广告" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="android02_65535.html" class="btn btn-neutral" title="解决65535方法数过多" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="android02_65535.html" class="btn btn-neutral float-left" title="解决65535方法数过多" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -268,27 +275,16 @@
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

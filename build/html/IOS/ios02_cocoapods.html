@@ -17,13 +17,21 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
@@ -31,21 +39,16 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="SDK初始化" href="ios03_init.html" />
     <link rel="prev" title="XCode" href="ios01_xcode.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -164,7 +167,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="cocoapods">
-<span id="cocoapods"></span><h1>CocoaPods 接入帮助<a class="headerlink" href="#cocoapods" title="Permalink to this headline">¶</a></h1>
+<h1>CocoaPods 接入帮助<a class="headerlink" href="#cocoapods" title="Permalink to this headline">¶</a></h1>
 <p>如果您使用CocoaPods来管理iOS项目的依赖关系，请按照以下步骤导入UPSDK：</p>
 <p>如果您是第一次使用CocoaPods接入此SDK，首先通过使用以下命令将 Avidly Repo 添加到CocoaPods中：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pod</span> <span class="n">repo</span> <span class="n">add</span> <span class="n">Avidly</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">guojunliu</span><span class="o">/</span><span class="n">AvidlyAdsSDK</span><span class="o">-</span><span class="n">SpecsRepo</span><span class="o">.</span><span class="n">git</span>
@@ -191,13 +194,13 @@ end
 </div>
 <p>完成</p>
 <p><code class="docutils literal notranslate"><span class="pre">注意：因GitHub对较大文件兼容性较差，故可能出现GoogleMobileAds.framework此SDK下载不完整的情况。请注意检查此SDK的大小，如发现为100M以下，请手动下载此SDK，并添加至项目</span></code></p>
-<div class="section" id="">
-<span id="id1"></span><h2>工程配置<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h2>工程配置<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>1 在info.plist中加入以下节点，以兼容http模式</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">NSAppTransportSecurity</span><span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="n">dict</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">NSAllowsArbitraryLoads</span><span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="nb">true</span><span class="o">/&gt;</span>
+	<span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span><span class="n">NSAllowsArbitraryLoads</span><span class="o">&lt;/</span><span class="n">key</span><span class="o">&gt;</span>
+	<span class="o">&lt;</span><span class="nb">true</span><span class="o">/&gt;</span>
 <span class="o">&lt;/</span><span class="n">dict</span><span class="o">&gt;</span>
 </pre></div>
 </div>
@@ -216,8 +219,8 @@ end
 <p>支持Bitcode，请使用者根据需求选择是否使用Bitcode（Domob和Youlan不支持Bitcode）
 <br></p>
 </div>
-<div class="section" id="">
-<span id="id2"></span><h2>查看版本号<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h2>查看版本号<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>在<em>UPSDKVersion.h</em>文件中，可以直接查看当前SDK的版本号。</p>
 <div class="highlight-objective-c notranslate"><div class="highlight"><pre><span></span><span class="c1">//sdk版本号</span>
 <span class="cp">#define UPSDKVERSION  @&quot;3003&quot;</span>
@@ -239,7 +242,7 @@ end
         <a href="ios03_init.html" class="btn btn-neutral float-right" title="SDK初始化" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="ios01_xcode.html" class="btn btn-neutral" title="XCode" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="ios01_xcode.html" class="btn btn-neutral float-left" title="XCode" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -265,27 +268,16 @@ end
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

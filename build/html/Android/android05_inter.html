@@ -17,35 +17,38 @@
   
 
   
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="激励视频" href="android06_video.html" />
-    <link rel="prev" title="横幅广告-自定义" href="android04_2_banner_custom.html" /> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
+    <link rel="prev" title="横幅广告-快速集成" href="android04_1_banner_quick.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -163,10 +166,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="">
-<span id="id1"></span><h1>插屏广告<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="">
-<span id="id2"></span><h2>广告对象初始化<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="id1">
+<h1>插屏广告<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id2">
+<h2>广告对象初始化<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>使用如下方式初始化插屏广告</p>
 <blockquote>
 <div>以下【广告位】可由接入方向<strong>我方技术支持同事询问</strong>。不同广告使用场景请尽量保持【广告位】的独立性，方便未来区分不同广告展示的收益来源。例如：在暂停界面中初始化广告时，【广告位】可传入”Pause” or “Menu”</div></blockquote>
@@ -174,8 +177,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id3"></span><h2>广告加载监听<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h2>广告加载监听<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <p>监听插屏广告加载结果，如果长时间未加载成功，会产生onLoadFailed()的回调。</p>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">load</span><span class="o">(</span><span class="n">UPInterstitialLoadCallback</span> <span class="n">callback</span><span class="o">)</span>
 </pre></div>
@@ -206,8 +209,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id4"></span><h2>显示插屏广告<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h2>显示插屏广告<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <p>根据您的业务逻辑，在您希望显示插屏广告的时机，调用show方法显示插屏广告</p>
 <p><strong>请注意在显示之前需要调用<code class="docutils literal notranslate"><span class="pre">isReady()</span></code>方法判断当前是否有广告可以显示</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">mInterstitialAd</span> <span class="o">!=</span> <span class="n">null</span> <span class="o">&amp;&amp;</span> <span class="n">mInterstitialAd</span><span class="o">.</span><span class="n">isReady</span><span class="p">())</span> <span class="p">{</span>
@@ -216,8 +219,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id5"></span><h2>回调接口<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id5">
+<h2>回调接口<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
 <p>插屏广告可以通过<code class="docutils literal notranslate"><span class="pre">setAvidlyInterstitialAdListener</span></code>方法设置回调接口，您的业务中如果没有需要针对相应回调的特殊处理，可以不使用回调。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mInterstitialAd</span><span class="o">.</span><span class="n">setUpInterstitialAdListener</span><span class="p">(</span><span class="n">new</span> <span class="n">UPInterstitialAdListener</span><span class="p">()</span> <span class="p">{</span>
     <span class="nd">@Override</span>
@@ -238,8 +241,8 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="">
-<span id="id6"></span><h2>调试页面<a class="headerlink" href="#" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h2>调试页面<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
 <p>为方便您了解视频广告的使用和加载状态，我们提供了视频广告调试页面，帮助您在开发过程中更好的了解视频广告的使用情况，可通过如下方法调用</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">mInterstitialAd</span> <span class="o">!=</span> <span class="n">null</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">mInterstitialAd</span><span class="o">.</span><span class="n">showInterstitialDebugActivity</span><span class="p">(</span><span class="n">this</span><span class="p">);</span>
@@ -247,9 +250,8 @@
 </pre></div>
 </div>
 <p>页面显示效果如下图，通过左右滑动您可以分别查看当前是否引入了对应联盟的SDK，服务器是否配置为您配置了当前联盟的广告位信息，以及联盟广告是否加载成功，在已经加载成功的情况下，点击条目可以观看联盟的广告效果。</p>
-<p><img src="http://docc.upltv.com/uploads/201810/5bcd4065a93a4_5bcd4065.png">
-<img src="http://docc.upltv.com/uploads/201810/5bcd408d13bcb_5bcd408d.png"></p>
-</div>
+<img src="http://docc.upltv.com/uploads/201810/5bcd4065a93a4_5bcd4065.png">
+<img src="http://docc.upltv.com/uploads/201810/5bcd408d13bcb_5bcd408d.png"></div>
 </div>
 
 
@@ -263,7 +265,7 @@
         <a href="android06_video.html" class="btn btn-neutral float-right" title="激励视频" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="android04_2_banner_custom.html" class="btn btn-neutral" title="横幅广告-自定义" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="android04_1_banner_quick.html" class="btn btn-neutral float-left" title="横幅广告-快速集成" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -289,27 +291,16 @@
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/js/custom.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
