@@ -106,12 +106,12 @@ Admob广告联盟的接入，我们提供两种方式，在网络允许的条件
 参考如下方式修改`build.gradle`文件，将Admob依赖的aar包添加到工程。
 ```groovy
 dependencies {
-    compile(name: 'play-services-ads-16.0.0', ext: 'aar')
-    compile(name: 'play-services-ads-base-16.0.0', ext: 'aar')
+    compile(name: 'play-services-ads-16.5.0', ext: 'aar')
+    compile(name: 'play-services-ads-base-16.5.0', ext: 'aar')
     compile(name: 'play-services-ads-identifier-16.0.0', ext: 'aar')
-    compile(name: 'play-services-ads-lite-16.0.0', ext: 'aar')
-    compile(name: 'play-services-basement-16.0.0', ext: 'aar')
-    compile(name: 'play-services-gass-16.0.0', ext: 'aar')
+    compile(name: 'play-services-ads-lite-16.5.0', ext: 'aar')
+    compile(name: 'play-services-basement-16.0.1', ext: 'aar')
+    compile(name: 'play-services-gass-16.5.0', ext: 'aar')
    }
 ```
 
@@ -128,19 +128,15 @@ dependencies {
     //other ads-libs
     //gson-2.7.jar在android_support_library目录中
     compile(name: 'gson-2.7', ext: 'jar')
-    compile(name: 'facebook_ads', ext: 'aar')
-    compile(name: 'facebook_exo_player', ext: 'aar')
-
-    compile(name: 'mobvista_ads', ext: 'aar')
-    compile(name: 'unity_ads', ext: 'aar')
-    compile(name: 'vungle_ads', ext: 'aar')
-    compile(name: 'chartboost_ads', ext: 'aar')
-    compile(name: 'ironsource_ads', ext: 'aar')
-    
     compile(name: 'adcolony_ads', ext: 'aar')
     compile(name: 'applovin_ads', ext: 'aar')
+    compile(name: 'chartboost_ads', ext: 'aar')
+    compile(name: 'facebook_ads', ext: 'aar')
+    compile(name: 'facebook_exo_player', ext: 'aar')
+    compile(name: 'ironsource_ads', ext: 'aar')
     compile(name: 'playable_ads', ext: 'aar')
-    compile(name: 'tapjoy_ads', ext: 'aar')
+    compile(name: 'unity_ads', ext: 'aar')
+    compile(name: 'vungle_ads', ext: 'aar')
 }
 ```
 
@@ -152,15 +148,15 @@ dependencies {
     //other ads-libs
     //gson-2.7.jar在android_support_library目录中
     compile(name: 'gson-2.7', ext: 'jar')
-    compile(name: 'centrixlink_ads', ext: 'aar')
-
-    compile(name: 'mobvista_ads', ext: 'aar')
-    compile(name: 'vungle_ads', ext: 'aar')
-    compile(name: 'chartboost_ads', ext: 'aar')
-    
-    compile(name: 'inmobi_ads', ext: 'aar')
+    compile(name: 'gdt_ads', ext: 'aar')
+    compile(name: 'mintegral_ads', ext: 'aar')
     compile(name: 'oneway_ads', ext: 'aar')
     compile(name: 'playable_ads', ext: 'aar')
+    compile(name: 'toutiao_ads', ext: 'aar')
+    compile(name: 'vungle_ads', ext: 'aar')
+    compile(name: 'android-gif-drawable', ext: 'aar')
+    compile(name: 'sigmob_ads',ext:'aar')
+    compile(name: 'baidu_ads',ext:'aar')
 }
 ```
 

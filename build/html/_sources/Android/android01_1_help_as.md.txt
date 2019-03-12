@@ -146,6 +146,19 @@ dependencies {
         compile 'com.google.android.gms:play-services-ads:16.0.0'
     }
 
+可以通过以下的方式添加依赖
+    
+```groovy
+dependencies {
+    compile(name: 'play-services-ads-16.5.0', ext: 'aar')
+    compile(name: 'play-services-ads-base-16.5.0', ext: 'aar')
+    compile(name: 'play-services-ads-identifier-16.0.0', ext: 'aar')
+    compile(name: 'play-services-ads-lite-16.5.0', ext: 'aar')
+    compile(name: 'play-services-basement-16.0.1', ext: 'aar')
+    compile(name: 'play-services-gass-16.5.0', ext: 'aar')
+   }
+```
+
 > 如果你只想通过本地添加gms play所依赖的aar文件，也可以在gradle文件中忽略此配置。
 > 特别地，如果你的工程中已经存在与UPSDK所依赖的gms play不同版时，请用更高的版本替换低版本。
 
