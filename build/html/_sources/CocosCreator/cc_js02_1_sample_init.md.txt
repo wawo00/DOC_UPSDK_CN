@@ -15,7 +15,7 @@ cc.bridgeInterface = require("UPLTV").bridgeInterface;
 /*
  初始化广告sdk
  请务必优先完成sdk初始化，然后才能正常使用SDK的其它API接口
- 参数zone：产品发行的区域，0:海外，1:中国大陆，2:自动根据ip定位
+ 参数zone：产品发行的区域，0:海外，1:中国大陆
  可选参数callback：SDK初始化完成后的回调接口, 回调接口包含一个布尔参数 callback(boolean)，true表示成功，否则失败
 */
 intSdk : function(zone, callback)

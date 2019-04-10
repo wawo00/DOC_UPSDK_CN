@@ -7,8 +7,7 @@
 
     public enum UPAdsGlobalZone {
         UPAdsGlobalZoneForeign,     //海外
-        UPAdsGlobalZoneDomestic,    //中国大陆
-        UPAdsGlobalZoneAuto,        //自动根据ip判断
+        UPAdsGlobalZoneDomestic    //中国大陆
     }
 ```
 

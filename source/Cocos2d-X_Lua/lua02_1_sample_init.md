@@ -11,7 +11,7 @@ local upltv = require "src.app.views.UPLTV"
 ###  初始化UPSDK
 ```lua
 -- 初始化广告sdk
--- 参数zone：产品发行的区域，0:海外，1:中国大陆，2:自动根据ip定位
+-- 参数zone：产品发行的区域，0:海外，1:中国大陆
 -- 可选参数callback：初始的回调接口, 接口定义 callback(boolean)，true表示成功，否则失败
 upltv:initSDK(zone, ...) 
 ```

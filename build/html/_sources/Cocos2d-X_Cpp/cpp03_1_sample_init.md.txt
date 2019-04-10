@@ -24,7 +24,7 @@ static void initSdkByZone(int zone);
 ```cpp
 /**
 * 请务必优先完成sdk初始化后，才能正常使用SDK的其它API接口
-* @param zone 产品发行的区域，0海外，1中国大陆，2自动根据ip定位
+* @param zone 产品发行的区域，0海外，1中国大陆
 */
 UpltvBridge::initSdkByZone(0);
 ```
