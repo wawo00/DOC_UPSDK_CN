@@ -40,13 +40,13 @@ UPSDK需要依赖第三广告联盟才能使用，所以需要手动将第三方
 - `CoreMedia.framework`
 - `CoreGraphics.framework`
 - `CFNetwork.framework`
-- `WebKit.framework (Optional)`
-- `WatchConnectivity.framework (Optional)`
+- `WebKit.framework` (Optional)
+- `WatchConnectivity.framework`	(Optional)
 - `SystemConfiguration.framework`
 - `StoreKit.framework`
 - `Social.framework`
 - `MessageUI.framework`
-- `JavaScriptCore.framework (Optional)`
+- `JavaScriptCore.framework`	(Optional)
 - `EventKit.framework`
 - `CoreTelephony.framework`
 - `AVFoundation.framework`
@@ -60,6 +60,10 @@ UPSDK需要依赖第三广告联盟才能使用，所以需要手动将第三方
 - `CoreLocation.framework`
 - `EventKitUI.framework`
 - `MobileCoreServices.framework`
+- `GameController.framework`
+- `PhotosUI.framework`
+- `Photos.framework`
+- `libresolv.tbd`
 
 如果您使用的是cocos，请额外添加一个依赖库
 
