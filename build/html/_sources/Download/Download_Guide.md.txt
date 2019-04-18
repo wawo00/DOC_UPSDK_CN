@@ -76,12 +76,12 @@
 [Layabox JavaScript v3.0.07.1](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_domestic_3007_1_Layabox_JS.zip "Layabox-JavaScript SDK v3.0.07")
 
 #### iOS
-[Layabox JavaScript v3.0.07.1](http://cnimg.dataverse.cn/upsdk/UPSDK_Layabox_iOS_JS_3006_7.zip "Layabox-JavaScript SDK v3.0.07")
+[Layabox JavaScript v3.0.07.1](http://cnimg.dataverse.cn/upsdk/UPSDK_Layabox_iOS_JS_3007_1.zip "Layabox-JavaScript SDK v3.0.07")
 
 ## Egret
 
 #### iOS
-[Egret TypeScript v3.0.07.1](http://cnimg.dataverse.cn/upsdk/UPSDK_iOS_EGret_TS_3006_7.zip "Egret TypeScript v3.0.07")
+[Egret TypeScript v3.0.07.1](http://cnimg.dataverse.cn/upsdk/UPSDK_iOS_EGret_TS_3007_1.zip "Egret TypeScript v3.0.07")
 
 ## Google-Play-Services Download
 [gms v9.0.0](http://cnimg.dataverse.cn/avidlysdk/gms9.0.0.zip "gms_v9.0.0")
