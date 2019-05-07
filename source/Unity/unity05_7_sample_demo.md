@@ -5,11 +5,11 @@
 
 国内：
 
-[Demo Download](https://github.com/wawo00/UPSDK_Demo2Unity/tree/3006_domestic)
+[Demo Download](https://github.com/wawo00/UPSDK_Demo2Unity/tree/3007_domestic)
 
 海外:
 
-[Demo Download](https://github.com/wawo00/UPSDK_Demo2Unity/tree/3006_foreign)
+[Demo Download](https://github.com/wawo00/UPSDK_Demo2Unity/tree/3007_foreign)
 
 
 
