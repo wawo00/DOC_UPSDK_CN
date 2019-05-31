@@ -1,0 +1,234 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Android 6.0 动态权限申请 &mdash; UPInteractive Document  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/js/custom.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/custom.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html">
+          
+
+          
+            
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter00.html">UPSDK 概述</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter01.html">UPSDK Android帮助文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter02.html">UPSDK IOS帮助文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter03.html">UPSDK UnityPlugin帮助文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter04.html">UPSDK Cocos2d-X Cpp帮助文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter05.html">UPSDK Cocos2d-X Lua帮助文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter06.html">UPSDK Cocos2d-X JavaScript帮助文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter07.html">UPSDK Layabox JavaScript帮助文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter08.html">UPSDK Egret TypeScript帮助文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter09.html">UPSDK Cocos Creator帮助文档</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter10.html">UPSDK 下载</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter11.html">GDPR支持</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter12.html">常见问题</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chapters/chapter13.html">国内安卓必看</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">UPInteractive Document</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Android 6.0 动态权限申请</li>
+    
+    
+
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="android-6-0">
+<h1>Android 6.0 动态权限申请<a class="headerlink" href="#android-6-0" title="Permalink to this headline">¶</a></h1>
+<p><strong>仅用于 android 国内版本，如果您使用的android 海外版本，请忽略此文档</strong></p>
+<p>Google在 Android 6.0 开始引入了权限申请机制，将所有权限分成了正常权限和危险权限。广告的相关功能需要动态的申请并得到用户的授权才能使用。</p>
+<div class="section" id="id1">
+<h2>推荐用例<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>示例代码：</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">public</span> <span class="k">class</span> <span class="nc">MainActivity</span> <span class="n">extends</span> <span class="n">Activity</span> <span class="p">{</span>
+  
+
+    <span class="n">@Override</span>
+    <span class="k">protected</span> <span class="k">void</span> <span class="nf">onCreate</span><span class="p">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="p">)</span> <span class="p">{</span>
+       <span class="c1">//申请动态权限</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">Build</span><span class="p">.</span><span class="n">VERSION</span><span class="p">.</span><span class="n">SDK_INT</span> <span class="p">&gt;=</span> <span class="n">Build</span><span class="p">.</span><span class="n">VERSION_CODES</span><span class="p">.</span><span class="n">M</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">ContextCompat</span><span class="p">.</span><span class="n">checkSelfPermission</span><span class="p">(</span><span class="n">MainActivity</span><span class="p">.</span><span class="k">this</span><span class="p">,</span> <span class="n">WRITE_EXTERNAL_STORAGE</span><span class="p">)</span> <span class="p">!=</span> <span class="n">PackageManager</span><span class="p">.</span><span class="n">PERMISSION_GRANTED</span>
+                <span class="p">||</span> <span class="n">ContextCompat</span><span class="p">.</span><span class="n">checkSelfPermission</span><span class="p">(</span><span class="n">MainActivity</span><span class="p">.</span><span class="k">this</span><span class="p">,</span> <span class="n">REQUEST_INSTALL_PACKAGES</span><span class="p">)</span> <span class="p">!=</span> <span class="n">PackageManager</span><span class="p">.</span><span class="n">PERMISSION_GRANTED</span>
+                <span class="p">||</span> <span class="n">ContextCompat</span><span class="p">.</span><span class="n">checkSelfPermission</span><span class="p">(</span><span class="n">MainActivity</span><span class="p">.</span><span class="k">this</span><span class="p">,</span> <span class="n">READ_PHONE_STATE</span><span class="p">)</span> <span class="p">!=</span> <span class="n">PackageManager</span><span class="p">.</span><span class="n">PERMISSION_GRANTED</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">ActivityCompat</span><span class="p">.</span><span class="n">requestPermissions</span><span class="p">(</span><span class="n">MainActivity</span><span class="p">.</span><span class="k">this</span><span class="p">,</span> <span class="k">new</span> <span class="n">String</span><span class="p">[]{</span><span class="n">WRITE_EXTERNAL_STORAGE</span><span class="p">,</span> <span class="n">REQUEST_INSTALL_PACKAGES</span><span class="p">,</span> <span class="n">READ_PHONE_STATE</span><span class="p">},</span> <span class="m">001</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="p">}</span>
+
+        <span class="c1">//初始化SDK</span>
+        <span class="n">UPAdsSdk</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="n">MainActivity</span><span class="p">.</span><span class="k">this</span><span class="p">,</span> <span class="n">UPAdsSdk</span><span class="p">.</span><span class="n">UPAdsGlobalZone</span><span class="p">.</span><span class="n">UPAdsGlobalZoneDomestic</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">@Override</span>
+    <span class="k">public</span> <span class="k">void</span> <span class="nf">onRequestPermissionsResult</span><span class="p">(</span><span class="kt">int</span> <span class="n">requestCode</span><span class="p">,</span> <span class="n">@NonNull</span> <span class="n">String</span><span class="p">[]</span> <span class="n">permissions</span><span class="p">,</span> <span class="n">@NonNull</span> <span class="kt">int</span><span class="p">[]</span> <span class="n">grantResults</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">super</span><span class="p">.</span><span class="n">onRequestPermissionsResult</span><span class="p">(</span><span class="n">requestCode</span><span class="p">,</span> <span class="n">permissions</span><span class="p">,</span> <span class="n">grantResults</span><span class="p">);</span>
+    <span class="p">}</span>
+
+
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, upltv
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -13,3 +13,4 @@ LuaPlugin 使用实例
    ../Cocos2d-X_Lua/lua02_5_sample_video
    ../Cocos2d-X_Lua/lua02_6_sample_gdpr
    ../Cocos2d-X_Lua/lua02_7_sample_demo
+   ../Cocos2d-X_Lua/lua02_9_update

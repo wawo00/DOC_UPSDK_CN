@@ -20,3 +20,4 @@ UPSDK尽管做了很好地集成与封装，但仍然有不少用户在首次接
    ../Android/android07_gdpr
    ../Android/android08_demo
    ../Android/android09_permission
+   ../Android/android10_update

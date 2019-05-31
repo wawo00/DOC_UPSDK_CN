@@ -13,3 +13,4 @@ CppPlugin 使用实例
    ../Cocos2d-X_Cpp/cpp03_5_sample_video
    ../Cocos2d-X_Cpp/cpp03_6_sample_gdpr
    ../Cocos2d-X_Cpp/cpp03_7_sample_demo
+   ../Cocos2d-X_Cpp/cpp03_9_update
