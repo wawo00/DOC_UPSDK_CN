@@ -143,19 +143,21 @@ dependencies {
 如果您的项目中希望接入Admob的广告，我们需要您在的项目中加入 Google Ads 支持，可以按以下的方式添加依赖
 
     dependencies {
-        compile 'com.google.android.gms:play-services-ads:16.0.0'
+        compile 'com.google.android.gms:play-services-ads:17.2.0'
     }
 
 可以通过以下的方式添加依赖
     
 ```groovy
 dependencies {
-    compile(name: 'play-services-ads-16.5.0', ext: 'aar')
-    compile(name: 'play-services-ads-base-16.5.0', ext: 'aar')
-    compile(name: 'play-services-ads-identifier-16.0.0', ext: 'aar')
-    compile(name: 'play-services-ads-lite-16.5.0', ext: 'aar')
-    compile(name: 'play-services-basement-16.0.1', ext: 'aar')
-    compile(name: 'play-services-gass-16.5.0', ext: 'aar')
+        compile(name: 'play-services-ads-17.2.0', ext: 'aar')
+        compile(name: 'play-services-ads-base-17.2.0', ext: 'aar')
+        compile(name: 'play-services-ads-identifier-16.0.0', ext: 'aar')
+        compile(name: 'play-services-ads-lite-17.2.0', ext: 'aar')
+        compile(name: 'play-services-basement-16.0.1', ext: 'aar')
+        compile(name: 'play-services-gass-17.2.0', ext: 'aar')
+        compile(name: 'play-services-measurement-base-16.3.0', ext: 'aar')
+        compile(name: 'play-services-measurement-sdk-api-16.3.0', ext: 'aar')
    }
 ```
 

@@ -96,7 +96,7 @@ Admob广告联盟的接入，我们提供两种方式，在网络允许的条件
 在`build.gradle`文件中，通过compile命令从Google的远程仓库下载gms play-service16.0.0的包。
 
 	dependencies {
-        compile 'com.google.android.gms:play-services-ads:16.0.0'
+        compile 'com.google.android.gms:play-services-ads:17.2.0'
     }
 
 
@@ -109,12 +109,14 @@ Admob广告联盟的接入，我们提供两种方式，在网络允许的条件
 参考如下方式修改`build.gradle`文件，将Admob依赖的aar包添加到工程。
 ```groovy
 dependencies {
-    compile(name: 'play-services-ads-16.0.0', ext: 'aar')
-    compile(name: 'play-services-ads-base-16.0.0', ext: 'aar')
-    compile(name: 'play-services-ads-identifier-16.0.0', ext: 'aar')
-    compile(name: 'play-services-ads-lite-16.0.0', ext: 'aar')
-    compile(name: 'play-services-basement-16.0.0', ext: 'aar')
-    compile(name: 'play-services-gass-16.0.0', ext: 'aar')
+        compile(name: 'play-services-ads-17.2.0', ext: 'aar')
+        compile(name: 'play-services-ads-base-17.2.0', ext: 'aar')
+        compile(name: 'play-services-ads-identifier-16.0.0', ext: 'aar')
+        compile(name: 'play-services-ads-lite-17.2.0', ext: 'aar')
+        compile(name: 'play-services-basement-16.0.1', ext: 'aar')
+        compile(name: 'play-services-gass-17.2.0', ext: 'aar')
+        compile(name: 'play-services-measurement-base-16.3.0', ext: 'aar')
+        compile(name: 'play-services-measurement-sdk-api-16.3.0', ext: 'aar')
    }
 ```
 
