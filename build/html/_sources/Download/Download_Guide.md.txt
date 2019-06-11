@@ -2,86 +2,86 @@
 
 ### 海外版本
 
-[Eclipe SDK v3.0.07.4 ](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_foreign_3.0.07.4_eclipse.zip "Eclipe SDK v3.0.07 ")
+[Eclipe SDK v3.0.07.5 ](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_foreign_3.0.07.5_eclipse.zip "Eclipe SDK v3.0.07 ")
 
-[Android Studio SDK v3.0.07.4](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_foreign_3.0.07.4_AndroidStudio.zip "Android Studio SDK v3.0.07 ")
+[Android Studio SDK v3.0.07.5](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_foreign_3.0.07.5_AndroidStudio.zip "Android Studio SDK v3.0.07 ")
 
 ### 国内版本
 
-[Eclipe SDK v3.0.07.4](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_domestic_3.0.07.4_eclipse.zip "Eclipe SDK v3.0.07 ")
+[Eclipe SDK v3.0.07.5](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_domestic_3.0.07.5_eclipse.zip "Eclipe SDK v3.0.07 ")
 
-[Android Studio SDK v3.0.07.4](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_domestic_3.0.07.4_AndroidStudio.zip "Android Studio SDK v3.0.07 ")
+[Android Studio SDK v3.0.07.5](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_domestic_3.0.07.5_AndroidStudio.zip "Android Studio SDK v3.0.07 ")
 
 ## iOS SDK
 
-[SDK v3.0.07.4](http://cnimg.dataverse.cn/upsdk/UPSDK_iOS_3.0.07.4.zip "SDK v3.0.07")
+[SDK v3.0.07.5](http://cnimg.dataverse.cn/upsdk/UPSDK_iOS_3.0.07.5.zip "SDK v3.0.07")
 
-[Other required SDK v3.0.07.4](http://cnimg.dataverse.cn/upsdk/Framework_tp_v3.0.07.4.zip "Other required SDK v3.0.07")
+[Other required SDK v3.0.07.5](http://cnimg.dataverse.cn/upsdk/Framework_tp_v3.0.07.5.zip "Other required SDK v3.0.07")
 
 ## Unity SDK
 
 ### 海外版本
 
-[Android v3.0.07.4](http://cnimg.dataverse.cn/upsdk/export_3007_4_android_foreign.unitypackage "SDK v3.0.07")
+[Android v3.0.07.5](http://cnimg.dataverse.cn/upsdk/export_3007_5_android_foreign.unitypackage "SDK v3.0.07")
 
-[Android & iOS v3.0.07.4](http://cnimg.dataverse.cn/upsdk/export_3007_4_both_foreign.unitypackage "SDK v3.0.07")
+[Android & iOS v3.0.07.5](http://cnimg.dataverse.cn/upsdk/export_3007_5_both_foreign.unitypackage "SDK v3.0.07")
 
 
 ### 国内版本
 
-[Android v3.0.07.4](http://cnimg.dataverse.cn/upsdk/export_3007_4_android_domestic.unitypackage "SDK v3.0.07")
+[Android v3.0.07.5](http://cnimg.dataverse.cn/upsdk/export_3007_5_android_domestic.unitypackage "SDK v3.0.07")
 
-[Android & iOS v3.0.07.4](http://cnimg.dataverse.cn/upsdk/export_3007_4_both_domestic.unitypackage "SDK v3.0.07")
+[Android & iOS v3.0.07.5](http://cnimg.dataverse.cn/upsdk/export_3007_5_both_domestic.unitypackage "SDK v3.0.07")
 
 ## Cocos2D-X
 
 #### Android 海外版本
-[Cocos-JS SDK v3.0.07.4 ](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_foreign_3.0.07.4_CocosJS.zip "Cocos-JS SDK v3.0.07 ")
+[Cocos-JS SDK v3.0.07.5 ](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_foreign_3.0.07.5_CocosJS.zip "Cocos-JS SDK v3.0.07 ")
 
-[Cocos-C++ SDK v3.0.07.4 ](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_foreign_3.0.07.4_CocosC++.zip "Cocos-C++ SDK v3.0.07 ")
+[Cocos-C++ SDK v3.0.07.5 ](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_foreign_3.0.07.5_CocosC++.zip "Cocos-C++ SDK v3.0.07 ")
 
-[Cocos-Lua SDK v3.0.07.4 ](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_foreign_3.0.07.4_CocosLua.zip "Cocos-Lua SDK v3.0.07 ")
+[Cocos-Lua SDK v3.0.07.5 ](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_foreign_3.0.07.5_CocosLua.zip "Cocos-Lua SDK v3.0.07 ")
 
 #### Android 国内版本
-[Cocos-JS SDK v3.0.07.4 ](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_domestic_3.0.07.4_CocosJS.zip "Cocos-JS SDK v3.0.07 ")
+[Cocos-JS SDK v3.0.07.5 ](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_domestic_3.0.07.5_CocosJS.zip "Cocos-JS SDK v3.0.07 ")
 
-[Cocos-C++ SDK v3.0.07.4 ](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_domestic_3.0.07.4_CocosC++.zip "Cocos-C++ SDK v3.0.07 ")
+[Cocos-C++ SDK v3.0.07.5 ](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_domestic_3.0.07.5_CocosC++.zip "Cocos-C++ SDK v3.0.07 ")
 
-[Cocos-Lua SDK v3.0.07.4 ](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_domestic_3.0.07.4_CocosLua.zip "Cocos-Lua SDK v3.0.07 ")
+[Cocos-Lua SDK v3.0.07.5 ](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_domestic_3.0.07.5_CocosLua.zip "Cocos-Lua SDK v3.0.07 ")
 
 #### iOS
-[Cocos-JS SDK v3.0.07.4 ](http://cnimg.dataverse.cn/upsdk/UPSDK_iOS_3.0.07.4_CocosJS.zip "Cocos-JS SDK v3.0.07 ")
+[Cocos-JS SDK v3.0.07.5 ](http://cnimg.dataverse.cn/upsdk/UPSDK_iOS_3.0.07.5_CocosJS.zip "Cocos-JS SDK v3.0.07 ")
 
-[Cocos-C++ SDK v3.0.07.4 ](http://cnimg.dataverse.cn/upsdk/UPSDK_iOS_3.0.07.4_CocosC++.zip "Cocos-C++ SDK v3.0.07 ")
+[Cocos-C++ SDK v3.0.07.5 ](http://cnimg.dataverse.cn/upsdk/UPSDK_iOS_3.0.07.5_CocosC++.zip "Cocos-C++ SDK v3.0.07 ")
 
-[Cocos-Lua SDK v3.0.07.4 ](http://cnimg.dataverse.cn/upsdk/UPSDK_iOS_3.0.07.4_CocosLua.zip "Cocos-Lua SDK v3.0.07 ")
+[Cocos-Lua SDK v3.0.07.5 ](http://cnimg.dataverse.cn/upsdk/UPSDK_iOS_3.0.07.5_CocosLua.zip "Cocos-Lua SDK v3.0.07 ")
 
 ## CocosCreator
 
 #### Android 海外版本
-[CocosCreator SDK v3.0.07.4 ](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_foreign_CocosCreator_3.0.07.4.zip "CocosCreator SDK v3.0.07 ")
+[CocosCreator SDK v3.0.07.5 ](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_foreign_CocosCreator_3.0.07.5.zip "CocosCreator SDK v3.0.07 ")
 
 #### Android 国内版本
-[CocosCreator SDK v3.0.07.4 ](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_domestic_CocosCreator_3.0.07.4.zip "CocosCreator SDK v3.0.07 ")
+[CocosCreator SDK v3.0.07.5 ](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_domestic_CocosCreator_3.0.07.5.zip "CocosCreator SDK v3.0.07 ")
 
 #### iOS
-[CocosCreator SDK v3.0.07.4 ](http://cnimg.dataverse.cn/upsdk/UPSDK_iOS_CocosCreator_3.0.07.4.zip "CocosCreator SDK v3.0.07 ")
+[CocosCreator SDK v3.0.07.5 ](http://cnimg.dataverse.cn/upsdk/UPSDK_iOS_CocosCreator_3.0.07.5.zip "CocosCreator SDK v3.0.07 ")
 
 ## Layabox
 
 #### Android海外版本
-[Layabox JavaScript v3.0.07.4](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_foreign_3007_4_Layabox_JS.zip "Layabox-JavaScript SDK v3.0.07")
+[Layabox JavaScript v3.0.07.5](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_foreign_3007_5_Layabox_JS.zip "Layabox-JavaScript SDK v3.0.07")
 
 #### Android国内版本
-[Layabox JavaScript v3.0.07.4](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_domestic_3007_4_Layabox_JS.zip "Layabox-JavaScript SDK v3.0.07")
+[Layabox JavaScript v3.0.07.5](http://cnimg.dataverse.cn/upsdk/UPSDK_Android_domestic_3007_5_Layabox_JS.zip "Layabox-JavaScript SDK v3.0.07")
 
 #### iOS
-[Layabox JavaScript v3.0.07.4](http://cnimg.dataverse.cn/upsdk/UPSDK_Layabox_iOS_JS_3007_4.zip "Layabox-JavaScript SDK v3.0.07")
+[Layabox JavaScript v3.0.07.5](http://cnimg.dataverse.cn/upsdk/UPSDK_Layabox_iOS_JS_3007_5.zip "Layabox-JavaScript SDK v3.0.07")
 
 ## Egret
 
 #### iOS
-[Egret TypeScript v3.0.07.4](http://cnimg.dataverse.cn/upsdk/UPSDK_iOS_EGret_TS_3007_4.zip "Egret TypeScript v3.0.07")
+[Egret TypeScript v3.0.07.5](http://cnimg.dataverse.cn/upsdk/UPSDK_iOS_EGret_TS_3007_5.zip "Egret TypeScript v3.0.07")
 
 ## Google-Play-Services Download
 [gms v9.0.0](http://cnimg.dataverse.cn/avidlysdk/gms9.0.0.zip "gms_v9.0.0")
@@ -102,4 +102,4 @@
 
 
 ## 更新日志
-**当前版本号：Android 3.0.07.4/IOS 3.0.07.4**
+**当前版本号：Android 3.0.07.5/IOS 3.0.07.5**
