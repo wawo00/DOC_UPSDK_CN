@@ -173,4 +173,11 @@ UPLTV 关注的主要有三个维度：
 不同类型的产品波动较大，以上数据仅供参考。
 
 
-
+### Q: Unity中出现错误 ClassNotFoundException: com.up.ads. unity. PolyProxy
+- 问题复现 
+    E/Unity: AndroidJavaException: java.lang.ClassNotFoundException: com.up.ads.unity.PolyProxy
+    java.lang.ClassNotFoundException: com.up.ads.unity.PolyProxy
+        at java.lang.Class.classForName(Native Method)
+        at java.lang.Class.forName(Class.java:453)
+        at java.lang.Class.forName(Class.java:378)
+- 请使用unity分包策略来生成apk文件 [分包策略](http://docs.upltv.com/zh/master/Unity/unity06_multidex_catalog.html)
