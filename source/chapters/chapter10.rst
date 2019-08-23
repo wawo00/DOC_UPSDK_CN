@@ -2,7 +2,8 @@
 UPSDK 下载
 =============================
 
-我们 **强烈推荐使用android 26版本进行游戏的打包和编译，如果使用android 28可能会出现错误**。
+我们 **已不再维护此文档，新文档地址如下**。
+`UPSDK 帮助文档 <https://www.upltv.com/doc>`_ 。
 
 .. toctree::
    :maxdepth: 1
