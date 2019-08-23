@@ -10,4 +10,4 @@ UPSDK 下载
    :titlesonly:
    :glob:
 
-   ../Download/*
+   
